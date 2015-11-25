@@ -47,7 +47,7 @@ navigationDelegate.wireTo(navigationController:
 self.navigationController!)
 ```
 
-3. If your want to change color of UINavigationBar, just let your view controller confirm protocol `LLRainbowColorSource`
+3. If you want to change color of UINavigationBar, just let your ViewController confirm protocol `LLRainbowColorSource`
 
 ```
 func ll_navigationBarInColor() -> UIColor {
