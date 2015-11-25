@@ -15,7 +15,6 @@ class DetailViewController: UIViewController, LLRainbowColorSource {
         super.viewDidLoad()
         
     }
-    
     // MARK: - ColorSource
     func ll_navigationBarInColor() -> UIColor {
         return UIColor.orangeColor()
