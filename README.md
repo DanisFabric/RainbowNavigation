@@ -6,7 +6,10 @@
 [![Platform](https://img.shields.io/cocoapods/p/RainbowNavigation.svg?style=flat)](http://cocoapods.org/pods/RainbowNavigation)
 
 
+Change UINavigationBar backgroundColor when Push/Pop in animation 
 
+![image1](https://github.com/DanisFabric/RainbowNavigation/blob/master/images/demo1.gif)
+![image2](https://github.com/DanisFabric/RainbowNavigation/blob/master/images/demo2.png)
 
 
 ## Requirements
