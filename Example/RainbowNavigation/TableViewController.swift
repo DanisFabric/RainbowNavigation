@@ -10,11 +10,14 @@ import UIKit
 import RainbowNavigation
 
 class TableViewController: UITableViewController {
+    
+//    lazy var navigationDelegate = LLRainbowNavigationDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor())
+        
     }
 
     override func didReceiveMemoryWarning() {

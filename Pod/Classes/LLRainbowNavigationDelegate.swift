@@ -6,8 +6,6 @@
 //
 //
 
-import Cocoa
-
 class LLRainbowNavigationDelegate: NSObject, UINavigationControllerDelegate {
     
     @IBOutlet private weak var navigationController:UINavigationController!
@@ -16,10 +14,10 @@ class LLRainbowNavigationDelegate: NSObject, UINavigationControllerDelegate {
     private var popAnimator:LLRainbowPopAnimator
     
     override init() {
-        super.init()
-        
         pushAnimator = LLRainbowPushAnimator()
         popAnimator = LLRainbowPopAnimator()
+        
+        super.init()
     }
     
     func wireTo(navigationController nc : UINavigationController) {

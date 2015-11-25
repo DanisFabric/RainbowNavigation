@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "20D996D3CEF03DF98977B92F"
+               BlueprintIdentifier = "1B498A918288E37516F1F68E"
                BuildableName = "RainbowNavigation.framework"
                BlueprintName = "RainbowNavigation"
                ReferencedContainer = "container:Pods.xcodeproj">

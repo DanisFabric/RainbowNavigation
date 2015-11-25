@@ -20,8 +20,8 @@ class LLRainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toColorSource = toVC as? LLRainbowColorSource
         
         var nextColor:UIColor?
-        nextColor = fromColorSource?.ll_navigationBarOutColor()
-        nextColor = toColorSource?.ll_navigationBarInColor()
+        nextColor = fromColorSource?.ll_navigationBarOutColor?()
+        nextColor = toColorSource?.ll_navigationBarInColor?()
         
         let containerView = transitionContext.containerView()!
         let shadowMask = UIView(frame: containerView.bounds)
