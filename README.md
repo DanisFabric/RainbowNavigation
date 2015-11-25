@@ -12,6 +12,7 @@ Change UINavigationBar backgroundColor when Push/Pop in animation
 
 
 ## Requirements
+
 * iOS 8.0+
 * Swift 2.0 +
 
@@ -36,7 +37,8 @@ It's very simple, just 3 steps
 
 ###### 1. set the backgroundColor of navigationBar
 
-```		navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()    
+```
+navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()
 ```
 
 ###### 2. wire the RainbowNavigationDelegate to your NavigationController
