@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'RainbowNavigation_Example', :exclusive => true do
+  pod "RainbowNavigation", :path => "../"
+end
+
+target 'RainbowNavigation_Tests', :exclusive => true do
+  pod "RainbowNavigation", :path => "../"
+
+  
+end
