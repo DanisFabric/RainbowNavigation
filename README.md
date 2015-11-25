@@ -43,18 +43,19 @@ It's very simple, just 3 steps
 		lazy var navigationDelegate = LLRainbowNavigationDelegate()
 
 		navigationDelegate.wireTo(navigationController: self.navigationController!)
-```
+
 
 3. If your want to change color of UINavigationBar, just let your view controller confirm protocol `LLRainbowColorSource`
 
 ```
-    // MARK: - ColorSource
-   	func ll_navigationBarInColor() -> UIColor {
-       	return UIColor.redColor()
-   	}
-   	func ll_navigationBarOutColor() -> UIColor {        		return UIColor.blueColor()
-    }
+func ll_navigationBarInColor() -> UIColor {
+	return UIColor.redColor()
+}
+func ll_navigationVarOutColor() -> UIColor {
+	return UIColor.blueColor()
+}
 ```
+
 
 ## Demo
 
