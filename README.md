@@ -45,8 +45,7 @@ navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()
 
 ```
 lazy var navigationDelegate = LLRainbowNavigationDelegate()
-navigationDelegate.wireTo(navigationController: 
-self.navigationController!)
+navigationDelegate.wireTo(navigationController: self.navigationController!)
 ```
 
 ###### 3. If you want to change color of UINavigationBar, just let your ViewController confirm protocol `LLRainbowColorSource`
