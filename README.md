@@ -22,7 +22,9 @@ Change UINavigationBar backgroundColor when Push/Pop in animation
 
 add the following line to your Podfile:
 
+```
 	pod "RainbowNavigation"
+```
 
 #### Manual
 
@@ -34,16 +36,16 @@ It's very simple, just 3 steps
 
 1. set the backgroundColor of navigationBar
 
-		navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()    
-
+```		navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()    
+```
 
 2. wire the RainbowNavigationDelegate to your NavigationController
 
-
-		lazy var navigationDelegate = LLRainbowNavigationDelegate()
-
-		navigationDelegate.wireTo(navigationController: self.navigationController!)
-
+```
+lazy var navigationDelegate = LLRainbowNavigationDelegate()
+navigationDelegate.wireTo(navigationController: 
+self.navigationController!)
+```
 
 3. If your want to change color of UINavigationBar, just let your view controller confirm protocol `LLRainbowColorSource`
 
