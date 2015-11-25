@@ -17,7 +17,9 @@ class TableViewController: UITableViewController, LLRainbowColorSource {
         super.viewDidLoad()
 
         navigationDelegate.wireTo(navigationController: self.navigationController!)
+        
         navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor())
+        navigationController?.navigationBar.ll_setStatusBarMaskColor(UIColor.blackColor().colorWithAlphaComponent(0.1))
     }
 
     override func didReceiveMemoryWarning() {
