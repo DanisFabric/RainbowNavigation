@@ -34,12 +34,12 @@ Just drag the .swift files to your project
 
 It's very simple, just 3 steps
 
-1. set the backgroundColor of navigationBar
+###### 1. set the backgroundColor of navigationBar
 
 ```		navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()    
 ```
 
-2. wire the RainbowNavigationDelegate to your NavigationController
+###### 2. wire the RainbowNavigationDelegate to your NavigationController
 
 ```
 lazy var navigationDelegate = LLRainbowNavigationDelegate()
@@ -47,7 +47,7 @@ navigationDelegate.wireTo(navigationController:
 self.navigationController!)
 ```
 
-3. If you want to change color of UINavigationBar, just let your ViewController confirm protocol `LLRainbowColorSource`
+###### 3. If you want to change color of UINavigationBar, just let your ViewController confirm protocol `LLRainbowColorSource`
 
 ```
 func ll_navigationBarInColor() -> UIColor {
