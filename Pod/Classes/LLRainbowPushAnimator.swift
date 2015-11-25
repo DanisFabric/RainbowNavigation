@@ -11,7 +11,7 @@ class LLRainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         return 0.3
     }
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        
+
         let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
         

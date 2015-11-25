@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12BFFE9041E165F27466581C08E263B0 /* Pods-RainbowNavigation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE2AFA00AB9D78F08AA2E83AADB461 /* Pods-RainbowNavigation_Tests-dummy.m */; };
+		12C2A82E1C0596E2000719B3 /* LLRainbowDragPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2A82D1C0596E2000719B3 /* LLRainbowDragPop.swift */; };
 		39A1816BE466C2C66DDA640633396F79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22F40B3A676EE3C29566802B89D764C /* Foundation.framework */; };
 		3B1F28023D9BEA5D82455617CADB536F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22F40B3A676EE3C29566802B89D764C /* Foundation.framework */; };
 		68194F8EBC15EE016B12D7A027D81509 /* LLRainbowColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D0C354C140C5FDF6482B457DEA488 /* LLRainbowColorSource.swift */; };
@@ -53,6 +54,7 @@
 		044D0C354C140C5FDF6482B457DEA488 /* LLRainbowColorSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LLRainbowColorSource.swift; sourceTree = "<group>"; };
 		0DC3943581FB7AE162F9A66382238298 /* Pods-RainbowNavigation_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Tests-resources.sh"; sourceTree = "<group>"; };
 		12974CB6256EB3D4E55A6026191F987D /* Pods-RainbowNavigation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RainbowNavigation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		12C2A82D1C0596E2000719B3 /* LLRainbowDragPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowDragPop.swift; sourceTree = "<group>"; };
 		208493A93374711B0441FB8C0B2D1648 /* Pods-RainbowNavigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RainbowNavigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		210B68AB9CBC1713F627C36A3700DC55 /* Pods-RainbowNavigation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		25BFD46C24453A5B967421C065956DF0 /* LLRainbowNavigationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LLRainbowNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				6A8E2F125C0E1112D65B0EC6F995A86C /* LLRainbowPopAnimator.swift */,
 				444446D8B4417794598D8B0FE3477FAB /* LLRainbowPushAnimator.swift */,
 				3FE24C2D8AC69C57733BC274D383FD79 /* UINavigationBar+Rainbow.swift */,
+				12C2A82D1C0596E2000719B3 /* LLRainbowDragPop.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -368,7 +371,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -419,6 +422,7 @@
 				7B0C8221CBFA66DD75EF615E6CECFC21 /* LLRainbowPopAnimator.swift in Sources */,
 				9B9E0D8653464FD2320EC7AA0E0A0703 /* LLRainbowPushAnimator.swift in Sources */,
 				B76690665475A81D6F7B602210129A3A /* RainbowNavigation-dummy.m in Sources */,
+				12C2A82E1C0596E2000719B3 /* LLRainbowDragPop.swift in Sources */,
 				D7AFE37295252A639AD179B2934E1B74 /* UINavigationBar+Rainbow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B9968B9EC3B21446765F7D7110351C0 /* Pods-RainbowNavigation_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -715,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3B33D25A38499BE0C115F8C564259F0 /* Pods-RainbowNavigation_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

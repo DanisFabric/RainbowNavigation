@@ -26,7 +26,7 @@ class LLRainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let containerView = transitionContext.containerView()!
         let shadowMask = UIView(frame: containerView.bounds)
         shadowMask.backgroundColor = UIColor.blackColor()
-        shadowMask.alpha = 0
+        shadowMask.alpha = 0.3
         
         let finalToFrame = transitionContext.finalFrameForViewController(toVC)
         toVC.view.frame = CGRectOffset(finalToFrame, -finalToFrame.width/2, 0)

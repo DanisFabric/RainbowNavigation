@@ -12,16 +12,20 @@ public class LLRainbowNavigationDelegate: NSObject, UINavigationControllerDelega
     
     private var pushAnimator:LLRainbowPushAnimator
     private var popAnimator:LLRainbowPopAnimator
+    private var dragPop:LLRainbowDragPop
     
     override public init() {
         pushAnimator = LLRainbowPushAnimator()
         popAnimator = LLRainbowPopAnimator()
-        
+        dragPop = LLRainbowDragPop()
+        dragPop.popAnimator = popAnimator
+
         super.init()
     }
     
     public func wireTo(navigationController nc : UINavigationController) {
         self.navigationController = nc
+        self.dragPop.navigationController = nc
         self.navigationController.delegate = self
     }
     
@@ -30,6 +34,10 @@ public class LLRainbowNavigationDelegate: NSObject, UINavigationControllerDelega
             return popAnimator
         }
         return pushAnimator
+    }
+    public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        
+        return dragPop.interacting ? dragPop : nil
     }
     
 }

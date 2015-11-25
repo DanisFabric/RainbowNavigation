@@ -36,18 +36,21 @@ class TableViewController: UITableViewController, LLRainbowColorSource {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 1
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellReuseID", forIndexPath: indexPath)
-        
-        cell.textLabel?.text = "Cell"
+        if indexPath.section == 0 {
+            cell.textLabel?.text = "next color"
+        }else if indexPath.section == 1 {
+            cell.textLabel?.text = "Clear"
+        }
         
         return cell
     }
