@@ -20,8 +20,8 @@
 
 add the following line to your Podfile:
 
-```pod "RainbowNavigation"
-```
+	pod "RainbowNavigation"
+
 #### Manual
 
 Just drag the .swift files to your project
@@ -32,30 +32,28 @@ It's very simple, just 3 steps
 
 1. set the backgroundColor of navigationBar
 
-```
-	navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()    
-     
-```
+		navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor()    
+
+
 2. wire the RainbowNavigationDelegate to your NavigationController
 
-```
-	lazy var navigationDelegate = LLRainbowNavigationDelegate()
-```
-```
-	navigationDelegate.wireTo(navigationController: self.navigationController!)
+
+		lazy var navigationDelegate = LLRainbowNavigationDelegate()
+
+		navigationDelegate.wireTo(navigationController: self.navigationController!)
 ```
 
 3. If your want to change color of UINavigationBar, just let your view controller confirm protocol `LLRainbowColorSource`
 
-```
-    // MARK: - ColorSource
-    func ll_navigationBarInColor() -> UIColor {
-        return UIColor.redColor()
-    }
-    func ll_navigationBarOutColor() -> UIColor {
-        return UIColor.blueColor()
-    }
-```
+
+    	// MARK: - ColorSource
+    	func ll_navigationBarInColor() -> UIColor {
+        	return UIColor.redColor()
+    	}
+    	func ll_navigationBarOutColor() -> UIColor {
+        	return UIColor.blueColor()
+    	}
+
 
 ## Demo
 
