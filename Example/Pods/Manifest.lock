@@ -1,0 +1,14 @@
+PODS:
+  - RainbowNavigation (0.1.0)
+
+DEPENDENCIES:
+  - RainbowNavigation (from `../`)
+
+EXTERNAL SOURCES:
+  RainbowNavigation:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RainbowNavigation: 241c78a06f2a255da33715f6985eacf17bbc802e
+
+COCOAPODS: 0.38.2

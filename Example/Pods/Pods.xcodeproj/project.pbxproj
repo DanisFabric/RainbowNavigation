@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12BFFE9041E165F27466581C08E263B0 /* Pods-RainbowNavigation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE2AFA00AB9D78F08AA2E83AADB461 /* Pods-RainbowNavigation_Tests-dummy.m */; };
+		12CC203C1C0560F9002B2421 /* LLRainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC203B1C0560F9002B2421 /* LLRainbowPushAnimator.swift */; };
+		12CC203E1C05610D002B2421 /* LLRainbowPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC203D1C05610D002B2421 /* LLRainbowPopAnimator.swift */; };
+		12CC20401C05619B002B2421 /* LLRainbowColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC203F1C05619B002B2421 /* LLRainbowColorSource.swift */; };
+		18034391B4CACBEC921B21F0DBDC0D45 /* UINavigationBar+Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED788DA508366994FE7F2366CB1EE1C /* UINavigationBar+Rainbow.swift */; };
+		2804F1D46A50B25C92C12697959C27BF /* RainbowNavigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5B799B5FC10018784E2FB8620FB926C /* RainbowNavigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B1F28023D9BEA5D82455617CADB536F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69D21C563CA8817171A8BF8C4C3857 /* Foundation.framework */; };
+		4D7D82C960D6C3674BC1E46C6F12F481 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69D21C563CA8817171A8BF8C4C3857 /* Foundation.framework */; };
+		526DF59010274F1424CA43C5BD8D93AB /* RainbowNavigation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 931022596D2113587DB5FE3D6E645AD8 /* RainbowNavigation.bundle */; };
+		84A764AC4D34FA22AC77AFB8E1C6C065 /* Pods-RainbowNavigation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCE4B33E4A31BEEBD7B3F31E37BD2E1 /* Pods-RainbowNavigation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1FF9E511334EE48B24160F71CA3DEFC /* Pods-RainbowNavigation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C37FAE8427C7CD4101434DA1C3015 /* Pods-RainbowNavigation_Example-dummy.m */; };
+		B74F5E344DBDFD60A11321B5292279AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE69D21C563CA8817171A8BF8C4C3857 /* Foundation.framework */; };
+		CC9E5E831C7A76D798052C6C1B78EC36 /* Pods-RainbowNavigation_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD2C3272D858EA131F15686B8AE4762 /* Pods-RainbowNavigation_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD65975CE511B110D543551AF5E065A2 /* RainbowNavigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0CE939D8FC39207A0ED43CBBE6550A /* RainbowNavigation-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F8696EDD76EA35C9EF7F7200EDFA71F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C5ECBAF9D902BFE327F2B0B59924DEB;
+			remoteInfo = RainbowNavigation;
+		};
+		1CE03209D689C47F7EEBB1B4792E4621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 752261F44D00F6200FDD27EC1A30BFCB;
+			remoteInfo = "RainbowNavigation-RainbowNavigation";
+		};
+		6BE6840AF7EF39A2ECE3C23F8F18DA8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C5ECBAF9D902BFE327F2B0B59924DEB;
+			remoteInfo = RainbowNavigation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0081AAFC194CBD065B3B56925F643886 /* Pods-RainbowNavigation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RainbowNavigation_Tests.modulemap"; sourceTree = "<group>"; };
+		0DC3943581FB7AE162F9A66382238298 /* Pods-RainbowNavigation_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Tests-resources.sh"; sourceTree = "<group>"; };
+		12974CB6256EB3D4E55A6026191F987D /* Pods-RainbowNavigation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RainbowNavigation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		12CC203B1C0560F9002B2421 /* LLRainbowPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowPushAnimator.swift; sourceTree = "<group>"; };
+		12CC203D1C05610D002B2421 /* LLRainbowPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowPopAnimator.swift; sourceTree = "<group>"; };
+		12CC203F1C05619B002B2421 /* LLRainbowColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowColorSource.swift; sourceTree = "<group>"; };
+		208493A93374711B0441FB8C0B2D1648 /* Pods-RainbowNavigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RainbowNavigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		210B68AB9CBC1713F627C36A3700DC55 /* Pods-RainbowNavigation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		31DDAB888995FE3CA35F2C890D4CF9E4 /* Pods-RainbowNavigation_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RainbowNavigation_Example.modulemap"; sourceTree = "<group>"; };
+		39198C5170D85368564DEAC36B0576D5 /* RainbowNavigation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RainbowNavigation-Private.xcconfig"; sourceTree = "<group>"; };
+		520C37FAE8427C7CD4101434DA1C3015 /* Pods-RainbowNavigation_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RainbowNavigation_Example-dummy.m"; sourceTree = "<group>"; };
+		58D67397CA5C5A36652F2D069F312981 /* Pods-RainbowNavigation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RainbowNavigation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		68E4994BA87220A3C27A4A0F3DE97AE0 /* RainbowNavigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RainbowNavigation.modulemap; sourceTree = "<group>"; };
+		6A3A8674B0AB86BABC9C3E94C67C7E99 /* Pods_RainbowNavigation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainbowNavigation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDE2AFA00AB9D78F08AA2E83AADB461 /* Pods-RainbowNavigation_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RainbowNavigation_Tests-dummy.m"; sourceTree = "<group>"; };
+		71A6399992B2CA3E0369DFB4FE8FC307 /* Pods-RainbowNavigation_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RainbowNavigation_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7CD2C3272D858EA131F15686B8AE4762 /* Pods-RainbowNavigation_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RainbowNavigation_Example-umbrella.h"; sourceTree = "<group>"; };
+		7E0CE939D8FC39207A0ED43CBBE6550A /* RainbowNavigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RainbowNavigation-dummy.m"; sourceTree = "<group>"; };
+		7ED788DA508366994FE7F2366CB1EE1C /* UINavigationBar+Rainbow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Rainbow.swift"; sourceTree = "<group>"; };
+		87B8EF00DF03CDA7FA2A6D72E0CACB38 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9248522BC834CD0D34F011A7CF57F40C /* Pods-RainbowNavigation_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RainbowNavigation_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		931022596D2113587DB5FE3D6E645AD8 /* RainbowNavigation.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainbowNavigation.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B9968B9EC3B21446765F7D7110351C0 /* Pods-RainbowNavigation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RainbowNavigation_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B18BDA6B9A8D82A68682C87526730A0A /* Pods-RainbowNavigation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RainbowNavigation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B98644569DF9B5E1FDEAA81F78ADDC0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC489538AE825827E1C3FFA350220CBB /* Pods_RainbowNavigation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainbowNavigation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1803C8FD27449C22DE68DC2C320A31A /* Pods-RainbowNavigation_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D3B33D25A38499BE0C115F8C564259F0 /* Pods-RainbowNavigation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RainbowNavigation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DBCE4B33E4A31BEEBD7B3F31E37BD2E1 /* Pods-RainbowNavigation_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RainbowNavigation_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E5B799B5FC10018784E2FB8620FB926C /* RainbowNavigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RainbowNavigation-umbrella.h"; sourceTree = "<group>"; };
+		EABA8A56D4CBA343130451C76B057BC3 /* RainbowNavigation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RainbowNavigation.xcconfig; sourceTree = "<group>"; };
+		EAF305D70E1ACDAAE497422F526EE73F /* RainbowNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RainbowNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEAB205177A08743B280C635CDA2C68C /* Pods-RainbowNavigation_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Example-resources.sh"; sourceTree = "<group>"; };
+		F1DA635BF3F98F03D5D3D95B97FDEC2D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD69F8A348063BDAB301AAE4AB70AED0 /* RainbowNavigation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RainbowNavigation-prefix.pch"; sourceTree = "<group>"; };
+		FE69D21C563CA8817171A8BF8C4C3857 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B08200CCC9195748FDF9B3AFEA72E7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1F28023D9BEA5D82455617CADB536F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DE59F50696983AC074F400BA12C104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7D82C960D6C3674BC1E46C6F12F481 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41B27DD15651F5793D0FD7775E8D4BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74F5E344DBDFD60A11321B5292279AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDDCA883BC865CA7F05B9822A24667D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AA2E33B542E83BE93AF2801AD2765D9 /* RainbowNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				C7A55E0A372C0FE5508CE2C446F640F7 /* Pod */,
+				8781F85C37BF21CFD536E6A9332FB2AC /* Support Files */,
+			);
+			name = RainbowNavigation;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		25F328B43556689965850276D6D24059 /* Pods-RainbowNavigation_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				87B8EF00DF03CDA7FA2A6D72E0CACB38 /* Info.plist */,
+				0081AAFC194CBD065B3B56925F643886 /* Pods-RainbowNavigation_Tests.modulemap */,
+				12974CB6256EB3D4E55A6026191F987D /* Pods-RainbowNavigation_Tests-acknowledgements.markdown */,
+				9248522BC834CD0D34F011A7CF57F40C /* Pods-RainbowNavigation_Tests-acknowledgements.plist */,
+				6EDE2AFA00AB9D78F08AA2E83AADB461 /* Pods-RainbowNavigation_Tests-dummy.m */,
+				210B68AB9CBC1713F627C36A3700DC55 /* Pods-RainbowNavigation_Tests-frameworks.sh */,
+				0DC3943581FB7AE162F9A66382238298 /* Pods-RainbowNavigation_Tests-resources.sh */,
+				DBCE4B33E4A31BEEBD7B3F31E37BD2E1 /* Pods-RainbowNavigation_Tests-umbrella.h */,
+				58D67397CA5C5A36652F2D069F312981 /* Pods-RainbowNavigation_Tests.debug.xcconfig */,
+				208493A93374711B0441FB8C0B2D1648 /* Pods-RainbowNavigation_Tests.release.xcconfig */,
+			);
+			name = "Pods-RainbowNavigation_Tests";
+			path = "Target Support Files/Pods-RainbowNavigation_Tests";
+			sourceTree = "<group>";
+		};
+		50B32C3F3BD89AA3D1946F5270EB1B59 /* Pods-RainbowNavigation_Example */ = {
+			isa = PBXGroup;
+			children = (
+				B98644569DF9B5E1FDEAA81F78ADDC0F /* Info.plist */,
+				31DDAB888995FE3CA35F2C890D4CF9E4 /* Pods-RainbowNavigation_Example.modulemap */,
+				71A6399992B2CA3E0369DFB4FE8FC307 /* Pods-RainbowNavigation_Example-acknowledgements.markdown */,
+				B18BDA6B9A8D82A68682C87526730A0A /* Pods-RainbowNavigation_Example-acknowledgements.plist */,
+				520C37FAE8427C7CD4101434DA1C3015 /* Pods-RainbowNavigation_Example-dummy.m */,
+				D1803C8FD27449C22DE68DC2C320A31A /* Pods-RainbowNavigation_Example-frameworks.sh */,
+				EEAB205177A08743B280C635CDA2C68C /* Pods-RainbowNavigation_Example-resources.sh */,
+				7CD2C3272D858EA131F15686B8AE4762 /* Pods-RainbowNavigation_Example-umbrella.h */,
+				9B9968B9EC3B21446765F7D7110351C0 /* Pods-RainbowNavigation_Example.debug.xcconfig */,
+				D3B33D25A38499BE0C115F8C564259F0 /* Pods-RainbowNavigation_Example.release.xcconfig */,
+			);
+			name = "Pods-RainbowNavigation_Example";
+			path = "Target Support Files/Pods-RainbowNavigation_Example";
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FE69D21C563CA8817171A8BF8C4C3857 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		74DE53C5513E2FD0C47E695E849E7FB3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				50B32C3F3BD89AA3D1946F5270EB1B59 /* Pods-RainbowNavigation_Example */,
+				25F328B43556689965850276D6D24059 /* Pods-RainbowNavigation_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		77097CA203373A33DC10D3A3CE9DFCB5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AA2E33B542E83BE93AF2801AD2765D9 /* RainbowNavigation */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		79B1C467A7FC135D7F646EFBB1B71EDF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7ED788DA508366994FE7F2366CB1EE1C /* UINavigationBar+Rainbow.swift */,
+				12CC203B1C0560F9002B2421 /* LLRainbowPushAnimator.swift */,
+				12CC203D1C05610D002B2421 /* LLRainbowPopAnimator.swift */,
+				12CC203F1C05619B002B2421 /* LLRainbowColorSource.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				77097CA203373A33DC10D3A3CE9DFCB5 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				74DE53C5513E2FD0C47E695E849E7FB3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8781F85C37BF21CFD536E6A9332FB2AC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1DA635BF3F98F03D5D3D95B97FDEC2D /* Info.plist */,
+				68E4994BA87220A3C27A4A0F3DE97AE0 /* RainbowNavigation.modulemap */,
+				EABA8A56D4CBA343130451C76B057BC3 /* RainbowNavigation.xcconfig */,
+				39198C5170D85368564DEAC36B0576D5 /* RainbowNavigation-Private.xcconfig */,
+				7E0CE939D8FC39207A0ED43CBBE6550A /* RainbowNavigation-dummy.m */,
+				FD69F8A348063BDAB301AAE4AB70AED0 /* RainbowNavigation-prefix.pch */,
+				E5B799B5FC10018784E2FB8620FB926C /* RainbowNavigation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RainbowNavigation";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7A55E0A372C0FE5508CE2C446F640F7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				79B1C467A7FC135D7F646EFBB1B71EDF /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC489538AE825827E1C3FFA350220CBB /* Pods_RainbowNavigation_Example.framework */,
+				6A3A8674B0AB86BABC9C3E94C67C7E99 /* Pods_RainbowNavigation_Tests.framework */,
+				931022596D2113587DB5FE3D6E645AD8 /* RainbowNavigation.bundle */,
+				EAF305D70E1ACDAAE497422F526EE73F /* RainbowNavigation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0809A5C7EAC6C91F6CDB256B4723C5C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A764AC4D34FA22AC77AFB8E1C6C065 /* Pods-RainbowNavigation_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B1EF503AC5BF72F9DBDA18DA0CD6FD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2804F1D46A50B25C92C12697959C27BF /* RainbowNavigation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFBAD492212FAF2D508B64F1305CBD57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9E5E831C7A76D798052C6C1B78EC36 /* Pods-RainbowNavigation_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4BE7C9B3AE78DD0F928879461EA14371 /* Pods-RainbowNavigation_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAB86115250B158744BB4D509223E80D /* Build configuration list for PBXNativeTarget "Pods-RainbowNavigation_Tests" */;
+			buildPhases = (
+				B8DFC20C5E75B080AB1D51A719A1BFA9 /* Sources */,
+				9B08200CCC9195748FDF9B3AFEA72E7B /* Frameworks */,
+				0809A5C7EAC6C91F6CDB256B4723C5C0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FECE829161D3341C9F8CC652C8054155 /* PBXTargetDependency */,
+			);
+			name = "Pods-RainbowNavigation_Tests";
+			productName = "Pods-RainbowNavigation_Tests";
+			productReference = 6A3A8674B0AB86BABC9C3E94C67C7E99 /* Pods_RainbowNavigation_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C5ECBAF9D902BFE327F2B0B59924DEB /* RainbowNavigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFEC2831CDDC43E6A9134879E0FE33FC /* Build configuration list for PBXNativeTarget "RainbowNavigation" */;
+			buildPhases = (
+				AD5C3075FAFF4CF8ACCA6929D3177561 /* Sources */,
+				A3DE59F50696983AC074F400BA12C104 /* Frameworks */,
+				052232A33CB441472E1123D6ABA06B11 /* Resources */,
+				9B1EF503AC5BF72F9DBDA18DA0CD6FD0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B98C9D4780DE76D7EA0487111F302B55 /* PBXTargetDependency */,
+			);
+			name = RainbowNavigation;
+			productName = RainbowNavigation;
+			productReference = EAF305D70E1ACDAAE497422F526EE73F /* RainbowNavigation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		752261F44D00F6200FDD27EC1A30BFCB /* RainbowNavigation-RainbowNavigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59404B45B582223755A4C1A29523CB6C /* Build configuration list for PBXNativeTarget "RainbowNavigation-RainbowNavigation" */;
+			buildPhases = (
+				CB744156AA07280E583F66195FA2B6F5 /* Sources */,
+				FDDCA883BC865CA7F05B9822A24667D3 /* Frameworks */,
+				BE78E4AD48030FD4B1F3E0D10890264F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RainbowNavigation-RainbowNavigation";
+			productName = "RainbowNavigation-RainbowNavigation";
+			productReference = 931022596D2113587DB5FE3D6E645AD8 /* RainbowNavigation.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B305C6B3B5B01AA18769776F85364380 /* Pods-RainbowNavigation_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE88E12EF12FBCE767F2C43CB7318240 /* Build configuration list for PBXNativeTarget "Pods-RainbowNavigation_Example" */;
+			buildPhases = (
+				61BBEF8798F36F7EACF1F3F2274E7F97 /* Sources */,
+				B41B27DD15651F5793D0FD7775E8D4BB /* Frameworks */,
+				EFBAD492212FAF2D508B64F1305CBD57 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FF7E2679902E35251E73174FE8D9746 /* PBXTargetDependency */,
+			);
+			name = "Pods-RainbowNavigation_Example";
+			productName = "Pods-RainbowNavigation_Example";
+			productReference = BC489538AE825827E1C3FFA350220CBB /* Pods_RainbowNavigation_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B305C6B3B5B01AA18769776F85364380 /* Pods-RainbowNavigation_Example */,
+				4BE7C9B3AE78DD0F928879461EA14371 /* Pods-RainbowNavigation_Tests */,
+				5C5ECBAF9D902BFE327F2B0B59924DEB /* RainbowNavigation */,
+				752261F44D00F6200FDD27EC1A30BFCB /* RainbowNavigation-RainbowNavigation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		052232A33CB441472E1123D6ABA06B11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526DF59010274F1424CA43C5BD8D93AB /* RainbowNavigation.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE78E4AD48030FD4B1F3E0D10890264F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61BBEF8798F36F7EACF1F3F2274E7F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1FF9E511334EE48B24160F71CA3DEFC /* Pods-RainbowNavigation_Example-dummy.m in Sources */,
+				12CC203E1C05610D002B2421 /* LLRainbowPopAnimator.swift in Sources */,
+				12CC203C1C0560F9002B2421 /* LLRainbowPushAnimator.swift in Sources */,
+				12CC20401C05619B002B2421 /* LLRainbowColorSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5C3075FAFF4CF8ACCA6929D3177561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD65975CE511B110D543551AF5E065A2 /* RainbowNavigation-dummy.m in Sources */,
+				18034391B4CACBEC921B21F0DBDC0D45 /* UINavigationBar+Rainbow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8DFC20C5E75B080AB1D51A719A1BFA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BFFE9041E165F27466581C08E263B0 /* Pods-RainbowNavigation_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB744156AA07280E583F66195FA2B6F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FF7E2679902E35251E73174FE8D9746 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RainbowNavigation;
+			target = 5C5ECBAF9D902BFE327F2B0B59924DEB /* RainbowNavigation */;
+			targetProxy = 0F8696EDD76EA35C9EF7F7200EDFA71F /* PBXContainerItemProxy */;
+		};
+		B98C9D4780DE76D7EA0487111F302B55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RainbowNavigation-RainbowNavigation";
+			target = 752261F44D00F6200FDD27EC1A30BFCB /* RainbowNavigation-RainbowNavigation */;
+			targetProxy = 1CE03209D689C47F7EEBB1B4792E4621 /* PBXContainerItemProxy */;
+		};
+		FECE829161D3341C9F8CC652C8054155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RainbowNavigation;
+			target = 5C5ECBAF9D902BFE327F2B0B59924DEB /* RainbowNavigation */;
+			targetProxy = 6BE6840AF7EF39A2ECE3C23F8F18DA8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		057492BFA0795919102743A563EE9E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39198C5170D85368564DEAC36B0576D5 /* RainbowNavigation-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = RainbowNavigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DF029AE63226E74D9B12CF332BC0CC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39198C5170D85368564DEAC36B0576D5 /* RainbowNavigation-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RainbowNavigation/RainbowNavigation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RainbowNavigation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RainbowNavigation/RainbowNavigation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RainbowNavigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7621F68881687D7CD5472D1E36400663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 208493A93374711B0441FB8C0B2D1648 /* Pods-RainbowNavigation_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RainbowNavigation_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-RainbowNavigation_Tests/Pods-RainbowNavigation_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RainbowNavigation_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		76FA4F59B7D34E9052F5C3C1E303B475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B9968B9EC3B21446765F7D7110351C0 /* Pods-RainbowNavigation_Example.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RainbowNavigation_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-RainbowNavigation_Example/Pods-RainbowNavigation_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RainbowNavigation_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B5ABD076B2540C383925175E3B0C873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39198C5170D85368564DEAC36B0576D5 /* RainbowNavigation-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = RainbowNavigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		984A880E78C905B188EEF6B552B238EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58D67397CA5C5A36652F2D069F312981 /* Pods-RainbowNavigation_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RainbowNavigation_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-RainbowNavigation_Tests/Pods-RainbowNavigation_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RainbowNavigation_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3736C8976A6A63829C15CEEDFAA329E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B33D25A38499BE0C115F8C564259F0 /* Pods-RainbowNavigation_Example.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RainbowNavigation_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-RainbowNavigation_Example/Pods-RainbowNavigation_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RainbowNavigation_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FFD89270728D3EFC9D0A3516A4F28EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39198C5170D85368564DEAC36B0576D5 /* RainbowNavigation-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RainbowNavigation/RainbowNavigation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RainbowNavigation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RainbowNavigation/RainbowNavigation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RainbowNavigation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59404B45B582223755A4C1A29523CB6C /* Build configuration list for PBXNativeTarget "RainbowNavigation-RainbowNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5ABD076B2540C383925175E3B0C873 /* Debug */,
+				057492BFA0795919102743A563EE9E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB86115250B158744BB4D509223E80D /* Build configuration list for PBXNativeTarget "Pods-RainbowNavigation_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984A880E78C905B188EEF6B552B238EC /* Debug */,
+				7621F68881687D7CD5472D1E36400663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFEC2831CDDC43E6A9134879E0FE33FC /* Build configuration list for PBXNativeTarget "RainbowNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFD89270728D3EFC9D0A3516A4F28EA6 /* Debug */,
+				2DF029AE63226E74D9B12CF332BC0CC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE88E12EF12FBCE767F2C43CB7318240 /* Build configuration list for PBXNativeTarget "Pods-RainbowNavigation_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76FA4F59B7D34E9052F5C3C1E303B475 /* Debug */,
+				F3736C8976A6A63829C15CEEDFAA329E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
