@@ -47,15 +47,14 @@ It's very simple, just 3 steps
 
 3. If your want to change color of UINavigationBar, just let your view controller confirm protocol `LLRainbowColorSource`
 
-
-    	// MARK: - ColorSource
-    	func ll_navigationBarInColor() -> UIColor {
-        	return UIColor.redColor()
-    	}
-    	func ll_navigationBarOutColor() -> UIColor {
-        	return UIColor.blueColor()
-    	}
-
+```
+    // MARK: - ColorSource
+   	func ll_navigationBarInColor() -> UIColor {
+       	return UIColor.redColor()
+   	}
+   	func ll_navigationBarOutColor() -> UIColor {        		return UIColor.blueColor()
+    }
+```
 
 ## Demo
 
