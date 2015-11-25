@@ -38,7 +38,6 @@ class LLRainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         let needPushTabBar = toVC.navigationController?.tabBarController != nil && toVC.hidesBottomBarWhenPushed && toVC.navigationController?.childViewControllers.count == 2
         
-        
         if needPushTabBar {
             toVC.navigationController?.tabBarController?.view.sendSubviewToBack(tabBar!)
         }

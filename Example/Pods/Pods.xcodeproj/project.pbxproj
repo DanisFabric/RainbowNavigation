@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122BDA321C05850C0067F6BD /* LLRainbowNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122BDA311C05850C0067F6BD /* LLRainbowNavigationDelegate.swift */; };
 		12BFFE9041E165F27466581C08E263B0 /* Pods-RainbowNavigation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE2AFA00AB9D78F08AA2E83AADB461 /* Pods-RainbowNavigation_Tests-dummy.m */; };
 		12CC203C1C0560F9002B2421 /* LLRainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC203B1C0560F9002B2421 /* LLRainbowPushAnimator.swift */; };
 		12CC203E1C05610D002B2421 /* LLRainbowPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC203D1C05610D002B2421 /* LLRainbowPopAnimator.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		0081AAFC194CBD065B3B56925F643886 /* Pods-RainbowNavigation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RainbowNavigation_Tests.modulemap"; sourceTree = "<group>"; };
 		0DC3943581FB7AE162F9A66382238298 /* Pods-RainbowNavigation_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Tests-resources.sh"; sourceTree = "<group>"; };
+		122BDA311C05850C0067F6BD /* LLRainbowNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowNavigationDelegate.swift; sourceTree = "<group>"; };
 		12974CB6256EB3D4E55A6026191F987D /* Pods-RainbowNavigation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RainbowNavigation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		12CC203B1C0560F9002B2421 /* LLRainbowPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowPushAnimator.swift; sourceTree = "<group>"; };
 		12CC203D1C05610D002B2421 /* LLRainbowPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowPopAnimator.swift; sourceTree = "<group>"; };
@@ -196,10 +198,11 @@
 		79B1C467A7FC135D7F646EFBB1B71EDF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				12CC203F1C05619B002B2421 /* LLRainbowColorSource.swift */,
 				7ED788DA508366994FE7F2366CB1EE1C /* UINavigationBar+Rainbow.swift */,
 				12CC203B1C0560F9002B2421 /* LLRainbowPushAnimator.swift */,
 				12CC203D1C05610D002B2421 /* LLRainbowPopAnimator.swift */,
-				12CC203F1C05619B002B2421 /* LLRainbowColorSource.swift */,
+				122BDA311C05850C0067F6BD /* LLRainbowNavigationDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			files = (
 				A1FF9E511334EE48B24160F71CA3DEFC /* Pods-RainbowNavigation_Example-dummy.m in Sources */,
 				12CC203E1C05610D002B2421 /* LLRainbowPopAnimator.swift in Sources */,
+				122BDA321C05850C0067F6BD /* LLRainbowNavigationDelegate.swift in Sources */,
 				12CC203C1C0560F9002B2421 /* LLRainbowPushAnimator.swift in Sources */,
 				12CC20401C05619B002B2421 /* LLRainbowColorSource.swift in Sources */,
 			);
