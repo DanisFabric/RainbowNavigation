@@ -25,26 +25,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2F2B80CE94E3FBE49F1FCB5238C771C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93F2F85E7B82A055CF1E4694B4EE46E8;
-			remoteInfo = RainbowNavigation;
-		};
-		7AA4BF76DE14522045A05E78A980EA89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93F2F85E7B82A055CF1E4694B4EE46E8;
-			remoteInfo = RainbowNavigation;
-		};
-		F70322E037D69716804D07684058B11B /* PBXContainerItemProxy */ = {
+		85EF3A29A698B57C72D6DB3BE6BA6247 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 752261F44D00F6200FDD27EC1A30BFCB;
 			remoteInfo = "RainbowNavigation-RainbowNavigation";
+		};
+		8D558516B93AE5629F21FCC646E16D0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93F2F85E7B82A055CF1E4694B4EE46E8;
+			remoteInfo = RainbowNavigation;
+		};
+		ECF6E5BCEB8C3DBD368FC8A392102431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93F2F85E7B82A055CF1E4694B4EE46E8;
+			remoteInfo = RainbowNavigation;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -301,7 +301,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D600149FA83D298CB6FD36EF10756ECC /* PBXTargetDependency */,
+				0F80AE0CF0635A6CA1475E491F2CF0A2 /* PBXTargetDependency */,
 			);
 			name = "Pods-RainbowNavigation_Tests";
 			productName = "Pods-RainbowNavigation_Tests";
@@ -337,7 +337,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				28FDBDFB38B2E1459E241CE6781D3D27 /* PBXTargetDependency */,
+				25C123AD5746032B54F4929CB9166450 /* PBXTargetDependency */,
 			);
 			name = RainbowNavigation;
 			productName = RainbowNavigation;
@@ -355,7 +355,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				7D143CBE3F47B11FCF5467E21C437C09 /* PBXTargetDependency */,
+				510CAD1D27CD64918F446340065B4867 /* PBXTargetDependency */,
 			);
 			name = "Pods-RainbowNavigation_Example";
 			productName = "Pods-RainbowNavigation_Example";
@@ -449,23 +449,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28FDBDFB38B2E1459E241CE6781D3D27 /* PBXTargetDependency */ = {
+		0F80AE0CF0635A6CA1475E491F2CF0A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RainbowNavigation;
+			target = 93F2F85E7B82A055CF1E4694B4EE46E8 /* RainbowNavigation */;
+			targetProxy = 8D558516B93AE5629F21FCC646E16D0F /* PBXContainerItemProxy */;
+		};
+		25C123AD5746032B54F4929CB9166450 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "RainbowNavigation-RainbowNavigation";
 			target = 752261F44D00F6200FDD27EC1A30BFCB /* RainbowNavigation-RainbowNavigation */;
-			targetProxy = F70322E037D69716804D07684058B11B /* PBXContainerItemProxy */;
+			targetProxy = 85EF3A29A698B57C72D6DB3BE6BA6247 /* PBXContainerItemProxy */;
 		};
-		7D143CBE3F47B11FCF5467E21C437C09 /* PBXTargetDependency */ = {
+		510CAD1D27CD64918F446340065B4867 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RainbowNavigation;
 			target = 93F2F85E7B82A055CF1E4694B4EE46E8 /* RainbowNavigation */;
-			targetProxy = 7AA4BF76DE14522045A05E78A980EA89 /* PBXContainerItemProxy */;
-		};
-		D600149FA83D298CB6FD36EF10756ECC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RainbowNavigation;
-			target = 93F2F85E7B82A055CF1E4694B4EE46E8 /* RainbowNavigation */;
-			targetProxy = 2F2B80CE94E3FBE49F1FCB5238C771C6 /* PBXContainerItemProxy */;
+			targetProxy = ECF6E5BCEB8C3DBD368FC8A392102431 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -9,15 +9,15 @@
 import UIKit
 import RainbowNavigation
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, LLRainbowColorSource {
     
-//    lazy var navigationDelegate = LLRainbowNavigationDelegate()
+    lazy var navigationDelegate = LLRainbowNavigationDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        navigationDelegate.wireTo(navigationController: self.navigationController!)
         navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor())
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,64 +25,36 @@ class TableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - ColorSource
+    func ll_navigationBarInColor() -> UIColor {
+        return UIColor.redColor()
+    }
+    func ll_navigationBarOutColor() -> UIColor {
+        return UIColor.blueColor()
+    }
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellReuseID", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = "Cell"
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("kSeguePushDetail", sender: self)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -90,6 +62,5 @@ class TableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

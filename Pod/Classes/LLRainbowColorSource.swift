@@ -6,7 +6,7 @@
 //
 //
 
-@objc protocol LLRainbowColorSource {
+@objc public protocol LLRainbowColorSource {
     optional func ll_navigationBarInColor() -> UIColor
     optional func ll_navigationBarOutColor() -> UIColor
 }
