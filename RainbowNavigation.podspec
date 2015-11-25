@@ -9,22 +9,20 @@
 Pod::Spec.new do |s|
   s.name             = "RainbowNavigation"
   s.version          = "0.1.0"
-  s.summary          = "A short description of RainbowNavigation."
+  s.summary          = "change UINavigationBar color when Push/Pop NavigationController in animation"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/RainbowNavigation"
+
+  s.homepage         = "https://github.com/danisfabric/RainbowNavigation"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "DanisFabric" => "danisfabric@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/RainbowNavigation.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/danisfabric/RainbowNavigation.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
