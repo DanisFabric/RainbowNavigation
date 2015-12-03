@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Rainbow-->
         <scene sceneID="Zz1-S9-Zwq">
             <objects>
                 <tableViewController id="kDk-nG-fC1" customClass="TableViewController" customModule="RainbowNavigation_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -41,16 +41,17 @@
                             <outlet property="delegate" destination="kDk-nG-fC1" id="0BC-5V-icm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="qrG-aU-Yra"/>
+                    <navigationItem key="navigationItem" title="Rainbow" id="qrG-aU-Yra"/>
                     <connections>
-                        <segue destination="upv-fK-l1H" kind="show" identifier="kSeguePushDetail" id="QVH-go-4BR"/>
+                        <segue destination="upv-fK-l1H" kind="show" identifier="kSeguePushDetailColor" id="QVH-go-4BR"/>
+                        <segue destination="A9I-EB-KJC" kind="show" identifier="kSeguePushDetailTransparent" id="s0o-5s-CBG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VDd-0P-9Uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="882" y="294"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Color-->
         <scene sceneID="ajf-jk-NAf">
             <objects>
                 <viewController id="upv-fK-l1H" customClass="DetailViewController" customModule="RainbowNavigation_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,10 +65,42 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Color" id="2Ja-tT-3l6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gru-X8-q6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1594" y="286"/>
+        </scene>
+        <!--Transparent Table View Controller-->
+        <scene sceneID="Zf3-gI-pnK">
+            <objects>
+                <tableViewController id="A9I-EB-KJC" customClass="TransparentTableViewController" customModule="RainbowNavigation_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ccB-8s-XoT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0N3-Hv-XX0">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0N3-Hv-XX0" id="8ng-Or-1hr">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A9I-EB-KJC" id="pSF-xv-QhY"/>
+                            <outlet property="delegate" destination="A9I-EB-KJC" id="v7c-vO-Myv"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHY-p5-oVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="987"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v7g-n0-68u">

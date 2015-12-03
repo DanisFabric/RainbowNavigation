@@ -38,25 +38,36 @@ class TableViewController: UITableViewController, LLRainbowColorSource {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellReuseID", forIndexPath: indexPath)
-        if indexPath.section == 0 {
-            cell.textLabel?.text = "next color"
-        }else if indexPath.section == 1 {
-            cell.textLabel?.text = "Clear"
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = "Colorful"
+        case 1:
+            cell.textLabel?.text = "Alpha"
+        default:
+            cell.textLabel?.text = "Nothing"
         }
         
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("kSeguePushDetail", sender: self)
+        switch indexPath.row {
+        case 0:
+            self.performSegueWithIdentifier("kSeguePushDetailColor", sender: self)
+        case 1:
+            self.performSegueWithIdentifier("kSeguePushDetailTransparent", sender: self)
+        default:
+            break
+        }
+        
     }
     
     // MARK: - Navigation
