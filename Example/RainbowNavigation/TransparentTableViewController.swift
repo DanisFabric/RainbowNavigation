@@ -52,7 +52,7 @@ class TransparentTableViewController: UITableViewController, LLRainbowColorSourc
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        let themeColor = UIColor.greenColor()
+        let themeColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 120/255.0, alpha: 1.0)
         
         let offsetY = scrollView.contentOffset.y
         if offsetY >= 0 {

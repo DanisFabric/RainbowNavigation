@@ -11,6 +11,8 @@ import RainbowNavigation
 
 class TableViewController: UITableViewController, LLRainbowColorSource {
     
+    let navColor = UIColor(red: 201/255.0, green: 115/255.0, blue: 228/255.0, alpha: 1.0)
+    
     lazy var navigationDelegate = LLRainbowNavigation()
 
     override func viewDidLoad() {
@@ -19,7 +21,8 @@ class TableViewController: UITableViewController, LLRainbowColorSource {
         if let navController = self.navigationController {
             navigationDelegate.wireTo(navigationController: navController)
         }
-        navigationController?.navigationBar.ll_setBackgroundColor(UIColor.redColor())
+        navigationController?.navigationBar.ll_setBackgroundColor(navColor)
+    
         navigationController?.navigationBar.ll_setStatusBarMaskColor(UIColor.blackColor().colorWithAlphaComponent(0.1))
     }
 
@@ -30,7 +33,7 @@ class TableViewController: UITableViewController, LLRainbowColorSource {
 
     // MARK: - ColorSource
     func ll_navigationBarInColor() -> UIColor {
-        return UIColor.redColor()
+        return navColor
     }
     func ll_navigationBarOutColor() -> UIColor {
         return UIColor.blueColor()
