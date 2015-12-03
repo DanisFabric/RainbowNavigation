@@ -15,7 +15,7 @@
 		7B0C8221CBFA66DD75EF615E6CECFC21 /* LLRainbowPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E2F125C0E1112D65B0EC6F995A86C /* LLRainbowPopAnimator.swift */; };
 		7CB2772A23D77929DFAEDD05877CFEAA /* RainbowNavigation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 931022596D2113587DB5FE3D6E645AD8 /* RainbowNavigation.bundle */; };
 		84A764AC4D34FA22AC77AFB8E1C6C065 /* Pods-RainbowNavigation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCE4B33E4A31BEEBD7B3F31E37BD2E1 /* Pods-RainbowNavigation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99810EA401680B9B5137E4C92FAA104D /* LLRainbowNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BFD46C24453A5B967421C065956DF0 /* LLRainbowNavigationDelegate.swift */; };
+		99810EA401680B9B5137E4C92FAA104D /* LLRainbowNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BFD46C24453A5B967421C065956DF0 /* LLRainbowNavigation.swift */; };
 		9B9E0D8653464FD2320EC7AA0E0A0703 /* LLRainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444446D8B4417794598D8B0FE3477FAB /* LLRainbowPushAnimator.swift */; };
 		A1FF9E511334EE48B24160F71CA3DEFC /* Pods-RainbowNavigation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C37FAE8427C7CD4101434DA1C3015 /* Pods-RainbowNavigation_Example-dummy.m */; };
 		A98ABF6C6758A71E3C346D6F12587C79 /* RainbowNavigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77EE486A68F59367BDB0CD6CA84147E4 /* RainbowNavigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,7 +57,7 @@
 		12C2A82D1C0596E2000719B3 /* LLRainbowDragPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRainbowDragPop.swift; sourceTree = "<group>"; };
 		208493A93374711B0441FB8C0B2D1648 /* Pods-RainbowNavigation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RainbowNavigation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		210B68AB9CBC1713F627C36A3700DC55 /* Pods-RainbowNavigation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RainbowNavigation_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		25BFD46C24453A5B967421C065956DF0 /* LLRainbowNavigationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LLRainbowNavigationDelegate.swift; sourceTree = "<group>"; };
+		25BFD46C24453A5B967421C065956DF0 /* LLRainbowNavigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LLRainbowNavigation.swift; sourceTree = "<group>"; };
 		31DDAB888995FE3CA35F2C890D4CF9E4 /* Pods-RainbowNavigation_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RainbowNavigation_Example.modulemap"; sourceTree = "<group>"; };
 		39198C5170D85368564DEAC36B0576D5 /* RainbowNavigation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RainbowNavigation-Private.xcconfig"; sourceTree = "<group>"; };
 		3FE24C2D8AC69C57733BC274D383FD79 /* UINavigationBar+Rainbow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Rainbow.swift"; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				044D0C354C140C5FDF6482B457DEA488 /* LLRainbowColorSource.swift */,
-				25BFD46C24453A5B967421C065956DF0 /* LLRainbowNavigationDelegate.swift */,
+				25BFD46C24453A5B967421C065956DF0 /* LLRainbowNavigation.swift */,
 				6A8E2F125C0E1112D65B0EC6F995A86C /* LLRainbowPopAnimator.swift */,
 				444446D8B4417794598D8B0FE3477FAB /* LLRainbowPushAnimator.swift */,
 				3FE24C2D8AC69C57733BC274D383FD79 /* UINavigationBar+Rainbow.swift */,
@@ -418,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68194F8EBC15EE016B12D7A027D81509 /* LLRainbowColorSource.swift in Sources */,
-				99810EA401680B9B5137E4C92FAA104D /* LLRainbowNavigationDelegate.swift in Sources */,
+				99810EA401680B9B5137E4C92FAA104D /* LLRainbowNavigation.swift in Sources */,
 				7B0C8221CBFA66DD75EF615E6CECFC21 /* LLRainbowPopAnimator.swift in Sources */,
 				9B9E0D8653464FD2320EC7AA0E0A0703 /* LLRainbowPushAnimator.swift in Sources */,
 				B76690665475A81D6F7B602210129A3A /* RainbowNavigation-dummy.m in Sources */,

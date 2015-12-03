@@ -18,14 +18,14 @@ class LLRainbowDragPop: UIPercentDrivenInteractiveTransition {
     }
     weak var popAnimator:LLRainbowPopAnimator!
     
-//    override public var completionSpeed:CGFloat {
-//        get {
-//            return max(0.5, 1 - self.percentComplete)
-//        }
-//    }
-//    override func completionSpeed() -> CGFloat {
-//        return max(0.5, 1 - self.percentComplete)
-//    }
+    override var completionSpeed: CGFloat {
+        get {
+            return max(CGFloat(0.5), 1 - self.percentComplete)
+        } set {
+            self.completionSpeed = newValue
+        }
+    }
+    
     
     func handlePan(panGesture:UIPanGestureRecognizer) {
         let offset = panGesture.translationInView(panGesture.view)
@@ -33,7 +33,6 @@ class LLRainbowDragPop: UIPercentDrivenInteractiveTransition {
         
         switch panGesture.state {
         case .Began:
-            print("begin")
             if !self.popAnimator.animating {
                 interacting = true
                 if velocity.x > 0 && self.navigationController.viewControllers.count > 0 {
@@ -48,7 +47,6 @@ class LLRainbowDragPop: UIPercentDrivenInteractiveTransition {
                 self.updateInteractiveTransition(progress)
             }
         case .Ended:
-            print("end")
             if interacting {
                 if panGesture.velocityInView(panGesture.view!).x > 0 {
                     self.finishInteractiveTransition()

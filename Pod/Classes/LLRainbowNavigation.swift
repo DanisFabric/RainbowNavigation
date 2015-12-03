@@ -6,7 +6,7 @@
 //
 //
 
-public class LLRainbowNavigationDelegate: NSObject, UINavigationControllerDelegate {
+public class LLRainbowNavigation: NSObject, UINavigationControllerDelegate {
     
     private weak var navigationController:UINavigationController!
     
