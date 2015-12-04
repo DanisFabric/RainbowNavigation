@@ -13,13 +13,13 @@ class TableViewController: UITableViewController, LLRainbowColorSource {
     
     let navColor = UIColor(red: 201/255.0, green: 115/255.0, blue: 228/255.0, alpha: 1.0)
     
-    lazy var navigationDelegate = LLRainbowNavigation()
+    lazy var rainbowNavigation = LLRainbowNavigation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let navController = self.navigationController {
-            navigationDelegate.wireTo(navigationController: navController)
+            rainbowNavigation.wireTo(navigationController: navController)
         }
         navigationController?.navigationBar.ll_setBackgroundColor(navColor)
     
