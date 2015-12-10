@@ -31,7 +31,7 @@ You can use `RainbowNavigation` to set the backgroundColor of `UINavigationBar` 
 add following code to your Podfile
 
 ```
-pod 'RainbowNavigation
+pod 'RainbowNavigation'
 ```
 
 
