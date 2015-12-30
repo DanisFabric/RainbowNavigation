@@ -8,25 +8,22 @@
 
 public class LLRainbowNavigation: NSObject, UINavigationControllerDelegate {
     
-    private weak var navigationController:UINavigationController!
+    private weak var navigationController:UINavigationController?
     
-    private var pushAnimator:RainbowPushAnimator
-    private var popAnimator:RainbowPopAnimator
-    private var dragPop:RainbowDragPop
+    private var pushAnimator:RainbowPushAnimator = RainbowPushAnimator()
+    private var popAnimator:RainbowPopAnimator = RainbowPopAnimator()
+    private var dragPop:RainbowDragPop = RainbowDragPop()
     
     override public init() {
-        pushAnimator = RainbowPushAnimator()
-        popAnimator = RainbowPopAnimator()
-        dragPop = RainbowDragPop()
-        dragPop.popAnimator = popAnimator
-
         super.init()
+        
+        dragPop.popAnimator = popAnimator
     }
     
     public func wireTo(navigationController nc : UINavigationController) {
         self.navigationController = nc
         self.dragPop.navigationController = nc
-        self.navigationController.delegate = self
+        self.navigationController?.delegate = self
     }
     
     public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
