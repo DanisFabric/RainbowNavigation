@@ -15,6 +15,12 @@
 		12767C5E1C33AEB200193645 /* RainbowNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 12767C5D1C33AEB200193645 /* RainbowNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12767C621C33AEB200193645 /* RainbowNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12767C5B1C33AEB200193645 /* RainbowNavigation.framework */; };
 		12767C631C33AEB200193645 /* RainbowNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12767C5B1C33AEB200193645 /* RainbowNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		12767C6E1C33AF4300193645 /* RainbowColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C681C33AF4300193645 /* RainbowColorSource.swift */; };
+		12767C6F1C33AF4300193645 /* RainbowDragPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C691C33AF4300193645 /* RainbowDragPop.swift */; };
+		12767C701C33AF4300193645 /* RainbowNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C6A1C33AF4300193645 /* RainbowNavigation.swift */; };
+		12767C711C33AF4300193645 /* RainbowPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C6B1C33AF4300193645 /* RainbowPopAnimator.swift */; };
+		12767C721C33AF4300193645 /* RainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C6C1C33AF4300193645 /* RainbowPushAnimator.swift */; };
+		12767C731C33AF4300193645 /* UINavigationBar+Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C6D1C33AF4300193645 /* UINavigationBar+Rainbow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		12767C5B1C33AEB200193645 /* RainbowNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RainbowNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12767C5D1C33AEB200193645 /* RainbowNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RainbowNavigation.h; sourceTree = "<group>"; };
 		12767C5F1C33AEB200193645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12767C681C33AF4300193645 /* RainbowColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowColorSource.swift; sourceTree = "<group>"; };
+		12767C691C33AF4300193645 /* RainbowDragPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowDragPop.swift; sourceTree = "<group>"; };
+		12767C6A1C33AF4300193645 /* RainbowNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowNavigation.swift; sourceTree = "<group>"; };
+		12767C6B1C33AF4300193645 /* RainbowPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPopAnimator.swift; sourceTree = "<group>"; };
+		12767C6C1C33AF4300193645 /* RainbowPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPushAnimator.swift; sourceTree = "<group>"; };
+		12767C6D1C33AF4300193645 /* UINavigationBar+Rainbow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Rainbow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,12 @@
 		12767C5C1C33AEB200193645 /* RainbowNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				12767C681C33AF4300193645 /* RainbowColorSource.swift */,
+				12767C691C33AF4300193645 /* RainbowDragPop.swift */,
+				12767C6A1C33AF4300193645 /* RainbowNavigation.swift */,
+				12767C6B1C33AF4300193645 /* RainbowPopAnimator.swift */,
+				12767C6C1C33AF4300193645 /* RainbowPushAnimator.swift */,
+				12767C6D1C33AF4300193645 /* UINavigationBar+Rainbow.swift */,
 				12767C5D1C33AEB200193645 /* RainbowNavigation.h */,
 				12767C5F1C33AEB200193645 /* Info.plist */,
 			);
@@ -235,6 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12767C6F1C33AF4300193645 /* RainbowDragPop.swift in Sources */,
+				12767C711C33AF4300193645 /* RainbowPopAnimator.swift in Sources */,
+				12767C6E1C33AF4300193645 /* RainbowColorSource.swift in Sources */,
+				12767C701C33AF4300193645 /* RainbowNavigation.swift in Sources */,
+				12767C731C33AF4300193645 /* UINavigationBar+Rainbow.swift in Sources */,
+				12767C721C33AF4300193645 /* RainbowPushAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RainbowNavigationSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RainbowNavigationSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,6 +402,7 @@
 		12767C651C33AEB200193645 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -388,6 +415,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danis.RainbowNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -397,6 +425,7 @@
 		12767C661C33AEB200193645 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -434,6 +463,7 @@
 				12767C551C33AEA200193645 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		12767C641C33AEB200193645 /* Build configuration list for PBXNativeTarget "RainbowNavigation" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +472,7 @@
 				12767C661C33AEB200193645 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
