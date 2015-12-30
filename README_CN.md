@@ -3,14 +3,16 @@
 
 # RainbowNavigation
 
-`RainbowNavigation` 是由Swfit2.0 编写的一个能够动态改变`UINavigationBar`背景色的组件。
+## 介绍
 
-## 功能
+`RainbowNavigation` 是由Swfit2.0编写。它允许你在各种情况下动画改变`UINavigationBar`的backgroundColor。
 
-* 将`UINavigationBar`背景色改为透明
-* `UINavigationBar` 增加类似MaterialDesign的深色`StatusBar`
-* `UINavigationController`在Push/Pop 时，背景色随动画过程进行改变
-* 手势拖拽进行`UINavigationController`的Pop行为
+`RainbowNavigation`主要能做以下几件事：
+
+- 任意改变`UINavigationBar`的背景色（其中包括透明）
+- 为`UINavigationBar`添加Material Design风格的状态栏颜色加深
+- `UINavigationBar`的背景色在navigationController进行Push或Pop的过程中，动画改变。
+- 为`UINavigationController`添加全屏大小的手势识别。
 
 ## 运行图
 
@@ -18,7 +20,7 @@
 ![image2](https://github.com/DanisFabric/RainbowNavigation/blob/master/images/demo2.gif)
 ![image3](https://github.com/DanisFabric/RainbowNavigation/blob/master/images/demo3.gif)
 
-## 基本需求
+## 基本要求
 
 * iOS 8.0+
 * Swift 2.0 +
@@ -27,46 +29,49 @@
 
 ### CocoaPods
 
-在Podfile添加以下代码快速集成
+在Podfile中添加下面代码，然后执行`pod install`
 
-```
+```ruby
 pod 'RainbowNavigation
 ```
 
+### Carthage
+
+在Cartfile添加以下代码，然后执行`carthage update`。
+
+```ruby
+github "DanisFabric/RainbowNavigation"
+```
 
 ## 如何使用
 
 ### 设置`UINavigationBar`的背景色
 
+通过`RainbowNavigation`来设置`UINavigationBar`的背景色不会出现色差问题，并且能够直接将navigationBar的背景色设置为透明：
 
-如下代码能够直接设置UINavigationBar的背景色，并不会有iOS7之后`UINavigationBar`的色差问题。当把颜色设置为`clearColor`时，`UINavigationBar`的背景会透明。
-
+```Swift
+navigationBar.df_setBackgroundColor(UIColor.clearColor())
 ```
-navigationBar.ll_setBackgroundColor(UIColor.clearColor())
-```
 
-将`ll_setBackgroundColor`带来的影响去掉
+重置背景色：
 
 ```
 navigationBar.ll_reset() // 恢复默认，取消之前的颜色设置的影响
 ```
 
-### 设置statusBar 遮罩颜色
+设置StatusBar的背景颜色：
 
-```
-navigationBar.ll_setStatusBarMaskColor(UIColor.blackColor().colorWithAlphaComponent(0.1))
-
+```Swift
+navigationBar.df_setStatusBarMaskColor(UIColor.blackColor().colorWithAlphaComponent(0.1))
 ```
 
 ### `UINavigationController`集成`RainbowNavigation`
 
 #### RainbowNavigation
 
-最好统一使用`ll_setBackgroundColor(color)`这个方法，因为`RainbowNavigation`也是通过此方法对UINavigationBar的颜色进行设置的。	
+1. 将`UINavigationController`绑定给`RainbowNavigation`:
 
-首先声明`LLRainbowNavigation`属性，然后通过`wireTo`方法将为其绑定对应的`UINavigationController`。
-
-```
+```Swift
 lazy var rainbowNavigation = LLRainbowNavigation()
    override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,19 +80,14 @@ lazy var rainbowNavigation = LLRainbowNavigation()
         }
     }
 ```
+2. `UIViewController`实现`RainbowColorSource`协议，navigationBar的颜色：
 
-
-#### LLRainbowColorSource
-
-`LLRainbowColorSource`是一个`protocol`，所有的UIViewController都可以实现此协议。在`RainbowNavigation`绑定了一个`UINavigationController`之后，每次`UINavigationController`在进行`Push`或`Pop`操作时，都会检查栈顶的`UIViewController`是否实现了ColorSource协议，并且显示Protocol两个方法返回的对应的颜色。	
-
-```
+```Swift
 @objc public protocol LLRainbowColorSource {
-    optional func ll_navigationBarInColor() -> UIColor    // ViewController被Push进去的时候，UINavigationBar将转变的背景色
-    optional func ll_navigationBarOutColor() -> UIColor   // ViewController被Pop出去的时候，UINavigationBar将转变的颜色
+    optional func navigationBarInColor() -> UIColor    // ViewController被Push进去的时候，UINavigationBar将转变的背景色
+    optional func navigationBarOutColor() -> UIColor   // ViewController被Pop出去的时候，UINavigationBar将转变的颜色
 }
 ```
-`LLRainbowColorSource`是可选的，可以不实现，此时`UINavigationBar`将保持原本的颜色。
 
 
 ## Demo
@@ -100,4 +100,26 @@ DanisFabric, danisfabric@gmail.com
 
 ## License
 
-RainbowNavigation is available under the MIT license. See the LICENSE file for more info.
+```
+The MIT License (MIT)
+
+Copyright © 2015 DanisFabric
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```

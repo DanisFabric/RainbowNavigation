@@ -4,16 +4,9 @@
 
 # RainbowNavigation [中文介绍](https://github.com/DanisFabric/RainbowNavigation/blob/master/README_CN.md)
 
-You can use `RainbowNavigation` to set the backgroundColor of `UINavigationBar` in animation.
-
 ## Feature
 
-* Set the backgroundColor of `UINavigationBar`.
-* Make transparent `UINavigationBar`
-* Add statusBar mask for `UINavigationBar`
-* Update the backgroundColor of `UINavgationBar` in animation
-* Support `Push/Pop` operations
-* Support gesture `Pop` operation
+`RainbowNavigation` is written in Swift2.0. It helps you change the backgroundColor of `UINavigationBar` in animations and transitions. 
 
 ![image1](https://github.com/DanisFabric/RainbowNavigation/blob/master/images/demo1.gif)
 ![image2](https://github.com/DanisFabric/RainbowNavigation/blob/master/images/demo2.gif)
@@ -28,44 +21,49 @@ You can use `RainbowNavigation` to set the backgroundColor of `UINavigationBar` 
 
 ### CocoaPods
 
-add following code to your Podfile
+Add following code to your `Podfile`, and run `pod install`: 
 
-```
+```ruby
 pod 'RainbowNavigation'
 ```
+### Carthage
 
+Add following code to your `Cartfile`, and run `carthage update`:
+
+```ruby
+github "DanisFabric/RainbowNavigation"
+```
 
 ## Usage
 
-### Set the backgroundColor of `UINavigationBar`
+### Change backgroundColor of `UINavigationBar`
 
 Make `UINavigationBar` transparent
 
 ```
-navigationBar.ll_setBackgroundColor(UIColor.clearColor())
+navigationBar.df_setBackgroundColor(UIColor.clearColor())
 ```
 Restore the default values
 
 ```
-navigationBar.ll_reset() // 恢复默认，取消之前的颜色设置的影响
+navigationBar.df_reset()
 ```
 
 ### Add StatusBar Mask
 
 
-```
-navigationBar.ll_setStatusBarMaskColor(UIColor.blackColor().colorWithAlphaComponent(0.1))
-
+```Swift
+navigationBar.df_setStatusBarMaskColor(UIColor.blackColor().colorWithAlphaComponent(0.1))
 ```
 
 ### Add `UINavigationController` support
 
 #### RainbowNavigation
 
-wire the `UINavigationController` to `RainbowNavigation`
+1. wire the `UINavigationController` to `RainbowNavigation`
 
-```
-lazy var rainbowNavigation = LLRainbowNavigation()
+```Swift
+lazy var rainbowNavigation = RainbowNavigation()
    override func viewDidLoad() {
         super.viewDidLoad()
         if let navController = self.navigationController {
@@ -74,15 +72,12 @@ lazy var rainbowNavigation = LLRainbowNavigation()
     }
 ```
 
+2. Your viewController need to confirm `RainbowColorSource` protocol, and offer the color which navigationBar will change into. 
 
-#### LLRainbowColorSource
-
-`UINavigationController's` children viewControllers comfirm `LLRainbowColorSource` protocol, and return the `UINavigationBar` color is OK.	
-
-```
-@objc public protocol LLRainbowColorSource {
-    optional func ll_navigationBarInColor() -> UIColor    
-    optional func ll_navigationBarOutColor() -> UIColor   
+```Swift
+@objc public protocol RainbowColorSource {
+    optional func navigationBarInColor() -> UIColor    
+    optional func navigationBarOutColor() -> UIColor   
 }
 ```
 
@@ -97,4 +92,26 @@ DanisFabric, danisfabric@gmail.com
 
 ## License
 
-RainbowNavigation is available under the MIT license. See the LICENSE file for more info.
+```
+The MIT License (MIT)
+
+Copyright © 2015 DanisFabric
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
