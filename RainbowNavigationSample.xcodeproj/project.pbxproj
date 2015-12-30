@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		12767C451C33AEA100193645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C441C33AEA100193645 /* AppDelegate.swift */; };
-		12767C471C33AEA100193645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C461C33AEA100193645 /* ViewController.swift */; };
 		12767C4A1C33AEA100193645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12767C481C33AEA100193645 /* Main.storyboard */; };
 		12767C4C1C33AEA200193645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12767C4B1C33AEA200193645 /* Assets.xcassets */; };
 		12767C4F1C33AEA200193645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12767C4D1C33AEA200193645 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,9 @@
 		12767C711C33AF4300193645 /* RainbowPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C6B1C33AF4300193645 /* RainbowPopAnimator.swift */; };
 		12767C721C33AF4300193645 /* RainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C6C1C33AF4300193645 /* RainbowPushAnimator.swift */; };
 		12767C731C33AF4300193645 /* UINavigationBar+Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C6D1C33AF4300193645 /* UINavigationBar+Rainbow.swift */; };
+		12767C751C33B3AA00193645 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C741C33B3AA00193645 /* MainTableViewController.swift */; };
+		12767C771C33B3B300193645 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C761C33B3B300193645 /* ColorTableViewController.swift */; };
+		12767C791C33B3BE00193645 /* TransparentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12767C781C33B3BE00193645 /* TransparentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,6 @@
 /* Begin PBXFileReference section */
 		12767C411C33AEA100193645 /* RainbowNavigationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainbowNavigationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12767C441C33AEA100193645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12767C461C33AEA100193645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12767C491C33AEA100193645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12767C4B1C33AEA200193645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12767C4E1C33AEA200193645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +65,9 @@
 		12767C6B1C33AF4300193645 /* RainbowPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPopAnimator.swift; sourceTree = "<group>"; };
 		12767C6C1C33AF4300193645 /* RainbowPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPushAnimator.swift; sourceTree = "<group>"; };
 		12767C6D1C33AF4300193645 /* UINavigationBar+Rainbow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Rainbow.swift"; sourceTree = "<group>"; };
+		12767C741C33B3AA00193645 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		12767C761C33B3B300193645 /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
+		12767C781C33B3BE00193645 /* TransparentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				12767C441C33AEA100193645 /* AppDelegate.swift */,
-				12767C461C33AEA100193645 /* ViewController.swift */,
+				12767C741C33B3AA00193645 /* MainTableViewController.swift */,
+				12767C761C33B3B300193645 /* ColorTableViewController.swift */,
+				12767C781C33B3BE00193645 /* TransparentTableViewController.swift */,
 				12767C481C33AEA100193645 /* Main.storyboard */,
 				12767C4B1C33AEA200193645 /* Assets.xcassets */,
 				12767C4D1C33AEA200193645 /* LaunchScreen.storyboard */,
@@ -244,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12767C471C33AEA100193645 /* ViewController.swift in Sources */,
+				12767C791C33B3BE00193645 /* TransparentTableViewController.swift in Sources */,
+				12767C751C33B3AA00193645 /* MainTableViewController.swift in Sources */,
+				12767C771C33B3B300193645 /* ColorTableViewController.swift in Sources */,
 				12767C451C33AEA100193645 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
