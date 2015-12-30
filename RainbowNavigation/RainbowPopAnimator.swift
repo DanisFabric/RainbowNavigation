@@ -20,8 +20,8 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toColorSource = toVC as? RainbowColorSource
         
         var nextColor:UIColor?
-        nextColor = fromColorSource?.ll_navigationBarOutColor?()
-        nextColor = toColorSource?.ll_navigationBarInColor?()
+        nextColor = fromColorSource?.navigationBarOutColor?()
+        nextColor = toColorSource?.navigationBarInColor?()
         
         let containerView = transitionContext.containerView()!
         let shadowMask = UIView(frame: containerView.bounds)
@@ -53,7 +53,7 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                 tabBar?.frame = CGRect(x: finalToFrame.minX, y: tabBar!.frame.minY, width: tabBar!.frame.width, height: tabBar!.frame.height)
             }
             if let navigationColor = nextColor {
-                fromVC.navigationController?.navigationBar.ll_setBackgroundColor(navigationColor)
+                fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
             }
             
             }) { (finished) -> Void in

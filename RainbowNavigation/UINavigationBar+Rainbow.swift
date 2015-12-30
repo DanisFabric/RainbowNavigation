@@ -9,11 +9,11 @@
 import Foundation
 
 private var kBackgroundViewKey = "kBackgroundViewKey"
-private var kStatusBarMaskKey = "kStatusBarMaskKey"
+private var kStatusBarMaskKey  = "kStatusBarMaskKey"
 
 extension UINavigationBar {
     
-    public func ll_setStatusBarMaskColor(color: UIColor) {
+    public func df_setStatusBarMaskColor(color: UIColor) {
         if statusBarMask == nil {
             statusBarMask = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.mainScreen().bounds.width, height: 20))
             statusBarMask?.autoresizingMask = [.FlexibleWidth,.FlexibleHeight]
@@ -25,7 +25,7 @@ extension UINavigationBar {
         }
         statusBarMask?.backgroundColor = color
     }
-    public func ll_setBackgroundColor(color: UIColor) {
+    public func df_setBackgroundColor(color: UIColor) {
         if backgroundView == nil {
             setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
             shadowImage = UIImage()
@@ -38,7 +38,7 @@ extension UINavigationBar {
         
     }
 
-    public func ll_reset() {
+    public func df_reset() {
         setBackgroundImage(nil, forBarMetrics: .Default)
         shadowImage = nil
         
@@ -49,9 +49,7 @@ extension UINavigationBar {
     // MARK: Properties
     private var backgroundView:UIView? {
         get {
-            let tempView = objc_getAssociatedObject(self, &kBackgroundViewKey) as? UIView
-            
-            return tempView
+            return objc_getAssociatedObject(self, &kBackgroundViewKey) as? UIView
         }
         set {
             objc_setAssociatedObject(self, &kBackgroundViewKey, newValue, .OBJC_ASSOCIATION_RETAIN)
@@ -60,8 +58,7 @@ extension UINavigationBar {
     }
     private var statusBarMask:UIView? {
         get {
-            let tempView = objc_getAssociatedObject(self, &kStatusBarMaskKey) as? UIView
-            return tempView
+            return objc_getAssociatedObject(self, &kStatusBarMaskKey) as? UIView
         }
         set {
             objc_setAssociatedObject(self, &kStatusBarMaskKey, newValue, .OBJC_ASSOCIATION_RETAIN)

@@ -19,8 +19,8 @@ class RainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toColorSource = toVC as? RainbowColorSource
         
         var nextColor:UIColor?
-        nextColor = fromColorSource?.ll_navigationBarOutColor?()
-        nextColor = toColorSource?.ll_navigationBarInColor?()
+        nextColor = fromColorSource?.navigationBarOutColor?()
+        nextColor = toColorSource?.navigationBarInColor?()
 
         let containerView = transitionContext.containerView()!
         let shadowMask = UIView(frame: containerView.bounds)
@@ -52,7 +52,7 @@ class RainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                 toVC.navigationController!.tabBarController!.tabBar.frame = CGRect(x: fromVC.view.frame.minX, y: fromVC.view.frame.minY, width: tabBar!.frame.width, height: tabBar!.frame.height)
             }
             if let navigationColor = nextColor {
-                fromVC.navigationController?.navigationBar.ll_setBackgroundColor(navigationColor)
+                fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
             }
             
             }) { (finished) -> Void in
