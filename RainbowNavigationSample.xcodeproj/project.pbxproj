@@ -12,7 +12,34 @@
 		12767C4A1C33AEA100193645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12767C481C33AEA100193645 /* Main.storyboard */; };
 		12767C4C1C33AEA200193645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12767C4B1C33AEA200193645 /* Assets.xcassets */; };
 		12767C4F1C33AEA200193645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12767C4D1C33AEA200193645 /* LaunchScreen.storyboard */; };
+		12767C5E1C33AEB200193645 /* RainbowNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 12767C5D1C33AEB200193645 /* RainbowNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12767C621C33AEB200193645 /* RainbowNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12767C5B1C33AEB200193645 /* RainbowNavigation.framework */; };
+		12767C631C33AEB200193645 /* RainbowNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12767C5B1C33AEB200193645 /* RainbowNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12767C601C33AEB200193645 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12767C391C33AEA100193645 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12767C5A1C33AEB200193645;
+			remoteInfo = RainbowNavigation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		12767C671C33AEB200193645 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				12767C631C33AEB200193645 /* RainbowNavigation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		12767C411C33AEA100193645 /* RainbowNavigationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainbowNavigationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +49,21 @@
 		12767C4B1C33AEA200193645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12767C4E1C33AEA200193645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12767C501C33AEA200193645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12767C5B1C33AEB200193645 /* RainbowNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RainbowNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12767C5D1C33AEB200193645 /* RainbowNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RainbowNavigation.h; sourceTree = "<group>"; };
+		12767C5F1C33AEB200193645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		12767C3E1C33AEA100193645 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12767C621C33AEB200193645 /* RainbowNavigation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12767C571C33AEB200193645 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				12767C431C33AEA100193645 /* RainbowNavigationSample */,
+				12767C5C1C33AEB200193645 /* RainbowNavigation */,
 				12767C421C33AEA100193645 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				12767C411C33AEA100193645 /* RainbowNavigationSample.app */,
+				12767C5B1C33AEB200193645 /* RainbowNavigation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,7 +104,27 @@
 			path = RainbowNavigationSample;
 			sourceTree = "<group>";
 		};
+		12767C5C1C33AEB200193645 /* RainbowNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				12767C5D1C33AEB200193645 /* RainbowNavigation.h */,
+				12767C5F1C33AEB200193645 /* Info.plist */,
+			);
+			path = RainbowNavigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		12767C581C33AEB200193645 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12767C5E1C33AEB200193645 /* RainbowNavigation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		12767C401C33AEA100193645 /* RainbowNavigationSample */ = {
@@ -74,15 +134,35 @@
 				12767C3D1C33AEA100193645 /* Sources */,
 				12767C3E1C33AEA100193645 /* Frameworks */,
 				12767C3F1C33AEA100193645 /* Resources */,
+				12767C671C33AEB200193645 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				12767C611C33AEB200193645 /* PBXTargetDependency */,
 			);
 			name = RainbowNavigationSample;
 			productName = RainbowNavigationSample;
 			productReference = 12767C411C33AEA100193645 /* RainbowNavigationSample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		12767C5A1C33AEB200193645 /* RainbowNavigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12767C641C33AEB200193645 /* Build configuration list for PBXNativeTarget "RainbowNavigation" */;
+			buildPhases = (
+				12767C561C33AEB200193645 /* Sources */,
+				12767C571C33AEB200193645 /* Frameworks */,
+				12767C581C33AEB200193645 /* Headers */,
+				12767C591C33AEB200193645 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RainbowNavigation;
+			productName = RainbowNavigation;
+			productReference = 12767C5B1C33AEB200193645 /* RainbowNavigation.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +175,9 @@
 				ORGANIZATIONNAME = danis;
 				TargetAttributes = {
 					12767C401C33AEA100193645 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					12767C5A1C33AEB200193645 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -113,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				12767C401C33AEA100193645 /* RainbowNavigationSample */,
+				12767C5A1C33AEB200193645 /* RainbowNavigation */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +212,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		12767C591C33AEB200193645 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +231,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		12767C561C33AEB200193645 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12767C611C33AEB200193645 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12767C5A1C33AEB200193645 /* RainbowNavigation */;
+			targetProxy = 12767C601C33AEB200193645 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		12767C481C33AEA100193645 /* Main.storyboard */ = {
@@ -248,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RainbowNavigationSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danis.RainbowNavigationSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -259,9 +366,52 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RainbowNavigationSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danis.RainbowNavigationSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		12767C651C33AEB200193645 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RainbowNavigation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danis.RainbowNavigation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12767C661C33AEB200193645 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RainbowNavigation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danis.RainbowNavigation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -282,6 +432,14 @@
 			buildConfigurations = (
 				12767C541C33AEA200193645 /* Debug */,
 				12767C551C33AEA200193645 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		12767C641C33AEB200193645 /* Build configuration list for PBXNativeTarget "RainbowNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12767C651C33AEB200193645 /* Debug */,
+				12767C661C33AEB200193645 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
