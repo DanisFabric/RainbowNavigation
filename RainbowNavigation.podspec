@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RainbowNavigation"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "An easy way to change the backgroundColor of UINavigationBar"
   s.homepage         = "https://github.com/danisfabric/RainbowNavigation"
   s.license          = 'MIT'
