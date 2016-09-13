@@ -34,14 +34,6 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         containerView.insertSubview(toVC.view, belowSubview: fromVC.view)
         containerView.insertSubview(shadowMask, aboveSubview: toVC.view)
         
-        let needPushBar = fromVC.navigationController?.tabBarController?.tabBar != nil && fromVC.hidesBottomBarWhenPushed && fromVC.navigationController?.viewControllers.count == 1
-        let tabBar = fromVC.navigationController?.tabBarController?.tabBar
-        
-        if needPushBar {
-            fromVC.navigationController?.tabBarController?.view.sendSubviewToBack(tabBar!)
-            tabBar!.frame = CGRect(x: toVC.view.frame.minX, y: toVC.view.frame.minY, width: tabBar!.frame.width, height: tabBar!.frame.height)
-        }
-        
         let duration = self.transitionDuration(transitionContext)
         
         animating = true
@@ -49,18 +41,12 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             fromVC.view.frame = CGRectOffset(fromVC.view.frame, fromVC.view.frame.width, 0)
             toVC.view.frame = finalToFrame
             shadowMask.alpha = 0
-            if needPushBar {
-                tabBar?.frame = CGRect(x: finalToFrame.minX, y: tabBar!.frame.minY, width: tabBar!.frame.width, height: tabBar!.frame.height)
-            }
             if let navigationColor = nextColor {
                 fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
             }
             
             }) { (finished) -> Void in
                 self.animating = false
-                if needPushBar {
-                    toVC.navigationController?.tabBarController?.view.bringSubviewToFront(tabBar!)
-                }
                 shadowMask.removeFromSuperview()
                 
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())

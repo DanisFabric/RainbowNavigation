@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HTv-ne-YMD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1qS-Ot-jRJ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Rainbow-->
@@ -41,7 +41,7 @@
         <!--Color-->
         <scene sceneID="3aa-Y8-4e4">
             <objects>
-                <tableViewController id="p83-bX-l6F" customClass="ColorTableViewController" customModule="RainbowNavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="p83-bX-l6F" customClass="ColorTableViewController" customModule="RainbowNavigationSample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SiR-B9-Lda">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,10 +96,11 @@
             </objects>
             <point key="canvasLocation" x="1598" y="827"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="250-cn-jKO">
             <objects>
                 <navigationController id="HTv-ne-YMD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="G4r-e1-XY8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SwG-KC-Dtw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -112,6 +113,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUo-iX-sdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="72" y="435"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="B10-bg-f0p">
+            <objects>
+                <tabBarController id="1qS-Ot-jRJ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="BNB-O1-ijO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HTv-ne-YMD" kind="relationship" relationship="viewControllers" id="x3h-Wt-5p9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bh-oj-7wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="526"/>
         </scene>
     </scenes>
 </document>

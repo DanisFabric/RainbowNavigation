@@ -11,7 +11,7 @@ class RainbowDragPop: UIPercentDrivenInteractiveTransition {
     var interacting = false
     weak var navigationController:UINavigationController! {
         didSet {
-            let panGesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(RainbowDragPop.handlePan(_:)))
             
             navigationController?.view.addGestureRecognizer(panGesture)
         }

@@ -34,31 +34,21 @@ class RainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let finalToFrame = transitionContext.finalFrameForViewController(toVC)
         toVC.view.frame = CGRectOffset(finalToFrame, finalToFrame.width, 0)
         
-        let tabBar = toVC.navigationController?.tabBarController?.tabBar
-        
-        let needPushTabBar = toVC.navigationController?.tabBarController != nil && toVC.hidesBottomBarWhenPushed && toVC.navigationController?.childViewControllers.count == 2
-        
-        if needPushTabBar {
-            toVC.navigationController?.tabBarController?.view.sendSubviewToBack(tabBar!)
-        }
+
         let duration = transitionDuration(transitionContext)
         
         UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseInOut, animations: { () -> Void in
             
             toVC.view.frame = finalToFrame
-            fromVC.view.frame = CGRectOffset(originFromFrame, -originFromFrame.width / 2, 0)
+            let finalFromframe = CGRectOffset(originFromFrame, -originFromFrame.width / 2, 0)
+            fromVC.view.frame = finalFromframe
             shadowMask.alpha = 0.3
-            if needPushTabBar {
-                toVC.navigationController!.tabBarController!.tabBar.frame = CGRect(x: fromVC.view.frame.minX, y: fromVC.view.frame.minY, width: tabBar!.frame.width, height: tabBar!.frame.height)
-            }
+
             if let navigationColor = nextColor {
                 fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
             }
             
             }) { (finished) -> Void in
-                if needPushTabBar {
-                    toVC.navigationController?.tabBarController?.view.bringSubviewToFront(tabBar!)
-                }
                 fromVC.view.frame = originFromFrame
                 shadowMask.removeFromSuperview()
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
