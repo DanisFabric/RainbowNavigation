@@ -28,16 +28,16 @@ class ColorTableViewController: UITableViewController, RainbowColorSource {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SampleCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
         cell.textLabel?.text = "Cell"
 
         return cell
@@ -45,6 +45,6 @@ class ColorTableViewController: UITableViewController, RainbowColorSource {
 
     // MARK: - RainbowColorSource
     func navigationBarInColor() -> UIColor {
-        return UIColor.redColor()
+        return UIColor.red
     }
 }

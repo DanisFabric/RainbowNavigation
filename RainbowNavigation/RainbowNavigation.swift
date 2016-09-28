@@ -6,13 +6,13 @@
 //
 //
 
-public class RainbowNavigation: NSObject, UINavigationControllerDelegate {
+open class RainbowNavigation: NSObject, UINavigationControllerDelegate {
     
-    private weak var navigationController:UINavigationController?
+    fileprivate weak var navigationController:UINavigationController?
     
-    private var pushAnimator:RainbowPushAnimator = RainbowPushAnimator()
-    private var popAnimator:RainbowPopAnimator = RainbowPopAnimator()
-    private var dragPop:RainbowDragPop = RainbowDragPop()
+    fileprivate var pushAnimator:RainbowPushAnimator = RainbowPushAnimator()
+    fileprivate var popAnimator:RainbowPopAnimator = RainbowPopAnimator()
+    fileprivate var dragPop:RainbowDragPop = RainbowDragPop()
     
     override public init() {
         super.init()
@@ -20,19 +20,19 @@ public class RainbowNavigation: NSObject, UINavigationControllerDelegate {
         dragPop.popAnimator = popAnimator
     }
     
-    public func wireTo(navigationController nc : UINavigationController) {
+    open func wireTo(navigationController nc : UINavigationController) {
         self.navigationController = nc
         self.dragPop.navigationController = nc
         self.navigationController?.delegate = self
     }
     
-    public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if operation == .Pop {
+    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .pop {
             return popAnimator
         }
         return pushAnimator
     }
-    public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    open func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         
         return dragPop.interacting ? dragPop : nil
     }

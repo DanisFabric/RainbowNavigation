@@ -17,7 +17,7 @@ class TransparentTableViewController: UITableViewController, RainbowColorSource 
         self.automaticallyAdjustsScrollViewInsets = false
         
         let imageView = UIImageView(image: UIImage(named: "demo-header"))
-        imageView.contentMode = .ScaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width * 0.75)
         tableView.tableHeaderView = imageView
     }
@@ -28,21 +28,21 @@ class TransparentTableViewController: UITableViewController, RainbowColorSource 
     }
     
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SampleCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
         cell.textLabel?.text = "Cell"
         
         return cell
     }
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let themeColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 120/255.0, alpha: 1.0)
         
         let offsetY = scrollView.contentOffset.y
@@ -53,12 +53,12 @@ class TransparentTableViewController: UITableViewController, RainbowColorSource 
             var progress = (scrollView.contentOffset.y - 64) / maxOffset
             progress = min(progress, 1)
             
-            self.navigationController?.navigationBar.df_setBackgroundColor(themeColor.colorWithAlphaComponent(progress))
+            self.navigationController?.navigationBar.df_setBackgroundColor(themeColor.withAlphaComponent(progress))
         }
     }
     
     // MARK: - RainbowColorSource
     func navigationBarInColor() -> UIColor {
-        return UIColor.clearColor()
+        return UIColor.clear
     }
 }
