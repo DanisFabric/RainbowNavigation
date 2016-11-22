@@ -27,37 +27,37 @@ class RainbowDragPop: UIPercentDrivenInteractiveTransition {
     }
     
     
-    func handlePan(panGesture:UIPanGestureRecognizer) {
-        let offset = panGesture.translationInView(panGesture.view)
-        let velocity = panGesture.velocityInView(panGesture.view)
+    func handlePan(_ panGesture:UIPanGestureRecognizer) {
+        let offset = panGesture.translation(in: panGesture.view)
+        let velocity = panGesture.velocity(in: panGesture.view)
         
         switch panGesture.state {
-        case .Began:
+        case .began:
             if !self.popAnimator.animating {
                 interacting = true
                 if velocity.x > 0 && self.navigationController.viewControllers.count > 0 {
-                    navigationController.popViewControllerAnimated(true)
+                    navigationController.popViewController(animated: true)
                 }
             }
-        case .Changed:
+        case .changed:
             if interacting {
                 var progress = offset.x / panGesture.view!.bounds.width
                 progress = max(progress,0)
                 
-                self.updateInteractiveTransition(progress)
+                self.update(progress)
             }
-        case .Ended:
+        case .ended:
             if interacting {
-                if panGesture.velocityInView(panGesture.view!).x > 0 {
-                    self.finishInteractiveTransition()
+                if panGesture.velocity(in: panGesture.view!).x > 0 {
+                    self.finish()
                 }else {
-                    self.cancelInteractiveTransition()
+                    self.cancel()
                 }
                 interacting = false
             }
-        case .Cancelled:
+        case .cancelled:
             if interacting {
-                self.cancelInteractiveTransition()
+                self.cancel()
                 interacting = false
             }
         default:
