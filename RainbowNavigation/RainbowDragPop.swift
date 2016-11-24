@@ -11,8 +11,8 @@ class RainbowDragPop: UIPercentDrivenInteractiveTransition {
     var interacting = false
     weak var navigationController:UINavigationController! {
         didSet {
-            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(RainbowDragPop.handlePan(_:)))
-            
+            let panGesture   = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(RainbowDragPop.handlePan(_:)))
+            panGesture.edges = UIRectEdge.left
             navigationController?.view.addGestureRecognizer(panGesture)
         }
     }
@@ -27,7 +27,7 @@ class RainbowDragPop: UIPercentDrivenInteractiveTransition {
     }
     
     
-    func handlePan(_ panGesture:UIPanGestureRecognizer) {
+    func handlePan(_ panGesture:UIScreenEdgePanGestureRecognizer) {
         let offset = panGesture.translation(in: panGesture.view)
         let velocity = panGesture.velocity(in: panGesture.view)
         
