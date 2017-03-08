@@ -29,10 +29,10 @@ extension UINavigationBar {
         if backgroundView == nil {
             setBackgroundImage(UIImage(), for: UIBarMetrics.default)
             shadowImage = UIImage()
-            backgroundView = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.width, height: 64))
+            backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64))
             backgroundView?.isUserInteractionEnabled = false
             backgroundView?.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-            insertSubview(backgroundView!, at: 0)
+            subviews.first?.insertSubview(backgroundView!, at: 0)
         }
         backgroundView?.backgroundColor = color
         
