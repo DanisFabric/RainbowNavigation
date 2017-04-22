@@ -53,7 +53,7 @@ class TransparentTableViewController: UITableViewController, RainbowColorSource 
             var progress = (scrollView.contentOffset.y - 64) / maxOffset
             progress = min(progress, 1)
             
-            self.navigationController?.navigationBar.df_setBackgroundColor(themeColor.withAlphaComponent(progress))
+            self.navigationController?.navigationBar.rb.backgroundColor = themeColor.withAlphaComponent(progress)
         }
     }
     

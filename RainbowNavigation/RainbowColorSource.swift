@@ -10,3 +10,7 @@
     @objc optional func navigationBarInColor() -> UIColor
     @objc optional func navigationBarOutColor() -> UIColor
 }
+
+@objc public protocol RainbowNavigationMutable {
+    @objc optional func currentNavigationBarColor() -> UIColor
+}

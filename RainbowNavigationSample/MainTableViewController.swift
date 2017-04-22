@@ -16,8 +16,9 @@ class MainTableViewController: UITableViewController, RainbowColorSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.df_setBackgroundColor(navColor)
-        self.navigationController?.navigationBar.df_setStatusBarMaskColor(UIColor(white: 0, alpha: 0.2))
+        
+        navigationController?.navigationBar.rb.backgroundColor = navColor
+        navigationController?.navigationBar.rb.statusBarColor = UIColor(white: 0, alpha: 0.2)
         
         if let navigationController = navigationController {
             rainbowNavigation.wireTo(navigationController: navigationController)

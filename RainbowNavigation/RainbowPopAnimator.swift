@@ -42,7 +42,7 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             toVC.view.frame = finalToFrame
             shadowMask.alpha = 0
             if let navigationColor = nextColor {
-                fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
+                fromVC.navigationController?.navigationBar.rb.backgroundColor = navigationColor
             }
             
             }) { (finished) -> Void in

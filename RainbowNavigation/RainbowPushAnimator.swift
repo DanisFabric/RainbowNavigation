@@ -45,7 +45,7 @@ class RainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             shadowMask.alpha = 0.3
 
             if let navigationColor = nextColor {
-                fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
+                fromVC.navigationController?.navigationBar.rb.backgroundColor = navigationColor
             }
             
             }) { (finished) -> Void in

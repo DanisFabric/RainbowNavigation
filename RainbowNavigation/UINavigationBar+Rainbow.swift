@@ -8,60 +8,75 @@
 
 import Foundation
 
-private var kBackgroundViewKey = "kBackgroundViewKey"
-private var kStatusBarMaskKey  = "kStatusBarMaskKey"
+private var kRainbowAssociatedKey = "kRainbowAssociatedKey"
+
+public class Rainbow: NSObject {
+    var navigationBar: UINavigationBar
+    
+    init(navigationBar: UINavigationBar) {
+        self.navigationBar = navigationBar
+        
+        super.init()
+    }
+    
+    fileprivate var navigationView: UIView?
+    fileprivate var statusBarView: UIView?
+    
+    public var backgroundColor: UIColor? {
+        get {
+            return navigationView?.backgroundColor
+        }
+        set {
+            if navigationView == nil {
+                navigationBar.setBackgroundImage(UIImage(), for: .default)
+                navigationBar.shadowImage = UIImage()
+                navigationView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: navigationBar.bounds.height + UIApplication.shared.statusBarFrame.height))
+                navigationView?.isUserInteractionEnabled = false
+                navigationView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                navigationBar.insertSubview(navigationView!, at: 0)
+            }
+            navigationView!.backgroundColor = newValue
+        }
+    }
+    public var statusBarColor: UIColor? {
+        get {
+            return statusBarView?.backgroundColor
+        }
+        set {
+            if statusBarView == nil {
+                statusBarView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: UIApplication.shared.statusBarFrame.height))
+                statusBarView?.isUserInteractionEnabled = false
+                statusBarView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                if let navigationView = navigationView {
+                    navigationBar.insertSubview(statusBarView!, aboveSubview: navigationView)
+                } else {
+                    navigationBar.insertSubview(statusBarView!, at: 0)
+                }
+            }
+            statusBarView?.backgroundColor = newValue
+        }
+    }
+    public func clear() {
+        navigationBar.setBackgroundImage(nil, for: .default)
+        navigationBar.shadowImage = nil
+        
+        navigationView?.removeFromSuperview()
+        navigationView = nil
+        
+        statusBarView?.removeFromSuperview()
+        statusBarView = nil
+    }
+}
 
 extension UINavigationBar {
-    
-    public func df_setStatusBarMaskColor(_ color: UIColor) {
-        if statusBarMask == nil {
-            statusBarMask = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.width, height: 20))
-            statusBarMask?.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-            if let tempBackgroundView = backgroundView {
-                insertSubview(statusBarMask!, aboveSubview: tempBackgroundView)
-            }else {
-                insertSubview(statusBarMask!, at: 0)
+    public var rb: Rainbow {
+        get {
+            if let rainbow = objc_getAssociatedObject(self, &kRainbowAssociatedKey) as? Rainbow {
+                return rainbow
             }
-        }
-        statusBarMask?.backgroundColor = color
-    }
-    public func df_setBackgroundColor(_ color: UIColor) {
-        if backgroundView == nil {
-            setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            shadowImage = UIImage()
-            backgroundView = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.width, height: 64))
-            backgroundView?.isUserInteractionEnabled = false
-            backgroundView?.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-            insertSubview(backgroundView!, at: 0)
-        }
-        backgroundView?.backgroundColor = color
-        
-    }
-
-    public func df_reset() {
-        setBackgroundImage(nil, for: .default)
-        shadowImage = nil
-        
-        backgroundView?.removeFromSuperview()
-        backgroundView = nil
-    }
-    
-    // MARK: Properties
-    fileprivate var backgroundView:UIView? {
-        get {
-            return objc_getAssociatedObject(self, &kBackgroundViewKey) as? UIView
-        }
-        set {
-            objc_setAssociatedObject(self, &kBackgroundViewKey, newValue, .OBJC_ASSOCIATION_RETAIN)
-            
-        }
-    }
-    fileprivate var statusBarMask:UIView? {
-        get {
-            return objc_getAssociatedObject(self, &kStatusBarMaskKey) as? UIView
-        }
-        set {
-            objc_setAssociatedObject(self, &kStatusBarMaskKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+            let rainbow = Rainbow(navigationBar: self)
+            objc_setAssociatedObject(self, &kRainbowAssociatedKey, rainbow, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            return rainbow
         }
     }
 }
