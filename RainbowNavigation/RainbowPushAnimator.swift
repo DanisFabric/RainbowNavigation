@@ -5,6 +5,7 @@
 //  Created by Danis on 15/11/25.
 //
 //
+import UIKit
 
 class RainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -45,7 +46,7 @@ class RainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             shadowMask.alpha = 0.3
 
             if let navigationColor = nextColor {
-                fromVC.navigationController?.navigationBar.rb.backgroundColor = navigationColor
+                fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
             }
             
             }) { (finished) -> Void in

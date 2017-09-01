@@ -5,7 +5,7 @@
 //  Created by Danis on 15/11/25.
 //
 //
-
+import UIKit
 open class RainbowNavigation: NSObject, UINavigationControllerDelegate {
     
     fileprivate weak var navigationController:UINavigationController?

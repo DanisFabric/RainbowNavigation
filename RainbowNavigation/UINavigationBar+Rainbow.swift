@@ -6,77 +6,164 @@
 //
 //
 
-import Foundation
+import UIKit
 
-private var kRainbowAssociatedKey = "kRainbowAssociatedKey"
-
-public class Rainbow: NSObject {
-    var navigationBar: UINavigationBar
-    
-    init(navigationBar: UINavigationBar) {
-        self.navigationBar = navigationBar
-        
-        super.init()
-    }
-    
-    fileprivate var navigationView: UIView?
-    fileprivate var statusBarView: UIView?
-    
-    public var backgroundColor: UIColor? {
-        get {
-            return navigationView?.backgroundColor
-        }
-        set {
-            if navigationView == nil {
-                navigationBar.setBackgroundImage(UIImage(), for: .default)
-                navigationBar.shadowImage = UIImage()
-                navigationView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: navigationBar.bounds.height + UIApplication.shared.statusBarFrame.height))
-                navigationView?.isUserInteractionEnabled = false
-                navigationView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                navigationBar.insertSubview(navigationView!, at: 0)
-            }
-            navigationView!.backgroundColor = newValue
-        }
-    }
-    public var statusBarColor: UIColor? {
-        get {
-            return statusBarView?.backgroundColor
-        }
-        set {
-            if statusBarView == nil {
-                statusBarView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: UIApplication.shared.statusBarFrame.height))
-                statusBarView?.isUserInteractionEnabled = false
-                statusBarView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                if let navigationView = navigationView {
-                    navigationBar.insertSubview(statusBarView!, aboveSubview: navigationView)
-                } else {
-                    navigationBar.insertSubview(statusBarView!, at: 0)
-                }
-            }
-            statusBarView?.backgroundColor = newValue
-        }
-    }
-    public func clear() {
-        navigationBar.setBackgroundImage(nil, for: .default)
-        navigationBar.shadowImage = nil
-        
-        navigationView?.removeFromSuperview()
-        navigationView = nil
-        
-        statusBarView?.removeFromSuperview()
-        statusBarView = nil
-    }
-}
+private var kBackgroundViewKey = "kBackgroundViewKey"
+private var kStatusBarMaskKey  = "kStatusBarMaskKey"
+private var kTitleLabelKey = "kTitleLabelKey"
+private var kBarButtonKey = "kBarButtonKey"
 
 extension UINavigationBar {
-    public var rb: Rainbow {
-        get {
-            if let rainbow = objc_getAssociatedObject(self, &kRainbowAssociatedKey) as? Rainbow {
-                return rainbow
+    
+    public func df_setStatusBarMaskColor(_ color: UIColor) {
+        if statusBarMask == nil {
+            statusBarMask = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.width, height: 20))
+            statusBarMask?.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+            if let tempBackgroundView = backgroundView {
+                insertSubview(statusBarMask!, aboveSubview: tempBackgroundView)
+            }else {
+                insertSubview(statusBarMask!, at: 0)
             }
-            let rainbow = Rainbow(navigationBar: self)
-            objc_setAssociatedObject(self, &kRainbowAssociatedKey, rainbow, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            return rainbow
+        }
+        statusBarMask?.backgroundColor = color
+    }
+//    public func df_setBackgroundColor(_ color: UIColor) {
+//        if backgroundView == nil {
+//            setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//            shadowImage = UIImage()
+//            backgroundView = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.width, height: 64))
+//            backgroundView?.isUserInteractionEnabled = false
+//            backgroundView?.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+//            insertSubview(backgroundView!, at: 0)
+//        }
+//        backgroundView?.backgroundColor = color
+//        
+//    }
+    
+    public func df_setBackgroundColor(_ color: UIColor,withBorder border:CGFloat = 0,withBorderColor borderColor:UIColor = UIColor(hex:"e7e7e7").alpha(0.7)) {
+        if backgroundView == nil {
+            setBackgroundImage(UIImage(), for: .default)
+            shadowImage = UIImage()
+            backgroundView = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.width, height: 64 - border))
+            
+            backgroundView?.isUserInteractionEnabled = false
+            backgroundView?.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+            insertSubview(backgroundView!, at: 0)
+        }
+
+        
+        backgroundView?.layer.borderColor = borderColor.cgColor
+        backgroundView?.layer.borderWidth = border
+
+        backgroundView?.backgroundColor = color
+        
+    }
+
+    public func df_reset() {
+        setBackgroundImage(nil, for: .default)
+        shadowImage = nil
+        
+        backgroundView?.removeFromSuperview()
+        backgroundView = nil
+    }
+    
+    public func df_setTitle(title:String, withColor color:UIColor = UIColor(hex: "373737")) {
+        if self.titleLabel == nil  {
+            self.titleLabel = UILabel()
+            if let tempBackgroundView = backgroundView {
+                insertSubview(self.titleLabel!, aboveSubview: tempBackgroundView)
+                self.titleLabel?.snp.makeConstraints { (make) in
+                    make.centerX.equalTo(tempBackgroundView)
+                    make.bottom.equalTo(-12)
+                }
+            }else {
+                insertSubview(self.titleLabel!, at: 0)
+                self.titleLabel?.snp.makeConstraints { (make) in
+                    make.centerX.equalTo(self)
+                    make.bottom.equalTo(-12)
+                }
+            }
+            titleLabel?.font = UIFont(name: "PingFangSC-Regular", size: 17)
+            titleLabel?.textColor = color
+        }
+        guard let titleLabel = self.titleLabel else{
+            return
+        }
+        titleLabel.text = title
+        
+        titleLabel.isHidden = false
+    }
+    
+    public func df_removeRightBarButton() {
+        if rightBarItem != nil {
+            rightBarItem?.removeFromSuperview()
         }
     }
+    
+    public func df_removeTitle(){
+        if let titleLabel = titleLabel {
+//            titleLabel.removeFromSuperview()
+            titleLabel.isHidden = true
+        }
+    }
+    
+    public func df_getRightBarButton() -> UIButton {
+        if rightBarItem != nil {
+            rightBarItem?.removeFromSuperview()
+        }
+        
+        rightBarItem = UIButton()
+        
+        if let tempBackgroundView = backgroundView {
+            insertSubview(rightBarItem!, aboveSubview: tempBackgroundView)
+        }else {
+            insertSubview(rightBarItem!, at: 0)
+        }
+        
+        let maxX:CGFloat = (backgroundView?.frame.maxX)!
+        rightBarItem?.frame = CGRect(x: maxX-15-25, y: 7, width: 25, height: 25)
+        
+//        rightBarItem?.isUserInteractionEnabled = true
+        return rightBarItem!
+        
+    }
+    
+    // MARK: Properties
+    fileprivate var backgroundView:UIView? {
+        get {
+            return objc_getAssociatedObject(self, &kBackgroundViewKey) as? UIView
+        }
+        set {
+            objc_setAssociatedObject(self, &kBackgroundViewKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+            
+        }
+    }
+    fileprivate var titleLabel : UILabel? {
+        get {
+            return objc_getAssociatedObject(self, &kTitleLabelKey) as? UILabel
+
+        }set {
+            objc_setAssociatedObject(self, &kTitleLabelKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+
+        }
+    }
+
+    fileprivate var statusBarMask:UIView? {
+        get {
+            return objc_getAssociatedObject(self, &kStatusBarMaskKey) as? UIView
+        }
+        set {
+            objc_setAssociatedObject(self, &kStatusBarMaskKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+    
+    fileprivate var rightBarItem:UIButton? {
+        get {
+            return objc_getAssociatedObject(self, &kBarButtonKey) as? UIButton
+        }
+        set {
+            objc_setAssociatedObject(self, &kBarButtonKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+
 }
