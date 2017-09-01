@@ -5,13 +5,14 @@
 //  Created by Danis on 15/11/25.
 //
 //
-
+import UIKit
 class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     var animating = false
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.2
     }
+    
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!
         let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)!
@@ -42,7 +43,7 @@ class RainbowPopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             toVC.view.frame = finalToFrame
             shadowMask.alpha = 0
             if let navigationColor = nextColor {
-                fromVC.navigationController?.navigationBar.rb.backgroundColor = navigationColor
+                fromVC.navigationController?.navigationBar.df_setBackgroundColor(navigationColor)
             }
             
             }) { (finished) -> Void in
