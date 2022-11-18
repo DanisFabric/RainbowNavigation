@@ -30,12 +30,19 @@ public class Rainbow: NSObject {
             if navigationView == nil {
                 navigationBar.setBackgroundImage(UIImage(), for: .default)
                 navigationBar.shadowImage = UIImage()
-                navigationView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: navigationBar.bounds.height + UIApplication.shared.statusBarFrame.height))
-                navigationView?.isUserInteractionEnabled = false
-                navigationView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                navigationBar.insertSubview(navigationView!, at: 0)
+                let _navigationView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: navigationBar.bounds.height + UIApplication.shared.statusBarFrame.height))
+                _navigationView.isUserInteractionEnabled = false
+                _navigationView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                _navigationView.layer.zPosition = -CGFloat.greatestFiniteMagnitude
+                navigationView = _navigationView
+                
+                var targetContainer: UIView = navigationBar
+                if #available(iOS 11, *), let c = navigationBar.subviews.first  {
+                    targetContainer = c
+                }
+                targetContainer.insertSubview(_navigationView, at: 0)
             }
-            navigationView!.backgroundColor = newValue
+            navigationView?.backgroundColor = newValue
         }
     }
     public var statusBarColor: UIColor? {
@@ -44,13 +51,20 @@ public class Rainbow: NSObject {
         }
         set {
             if statusBarView == nil {
-                statusBarView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: UIApplication.shared.statusBarFrame.height))
-                statusBarView?.isUserInteractionEnabled = false
-                statusBarView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                let _statusBarView = UIView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: navigationBar.bounds.width, height: UIApplication.shared.statusBarFrame.height))
+                _statusBarView.isUserInteractionEnabled = false
+                _statusBarView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                _statusBarView.layer.zPosition = -CGFloat.greatestFiniteMagnitude + 1
+                statusBarView = _statusBarView
+                
+                var targetContainer: UIView = navigationBar
+                if #available(iOS 11, *), let c = navigationBar.subviews.first  {
+                    targetContainer = c
+                }
                 if let navigationView = navigationView {
-                    navigationBar.insertSubview(statusBarView!, aboveSubview: navigationView)
+                    targetContainer.insertSubview(_statusBarView, aboveSubview: navigationView)
                 } else {
-                    navigationBar.insertSubview(statusBarView!, at: 0)
+                    targetContainer.insertSubview(_statusBarView, at: 0)
                 }
             }
             statusBarView?.backgroundColor = newValue

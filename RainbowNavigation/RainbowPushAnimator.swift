@@ -37,7 +37,7 @@ class RainbowPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
         let duration = transitionDuration(using: transitionContext)
         
-        UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(), animations: { () -> Void in
             
             toVC.view.frame = finalToFrame
             let finalFromframe = originFromFrame.offsetBy(dx: -originFromFrame.width / 2, dy: 0)

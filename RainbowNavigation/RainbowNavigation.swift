@@ -26,7 +26,7 @@ open class RainbowNavigation: NSObject, UINavigationControllerDelegate {
         self.navigationController?.delegate = self
     }
     
-    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .pop {
             return popAnimator
         }
